@@ -1,0 +1,770 @@
+<!DOCTYPE html>
+
+<html lang="id"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "outline-variant": "#c7c4d8",
+                    "on-tertiary-container": "#ffd2be",
+                    "outline": "#777587",
+                    "tertiary": "#7e3000",
+                    "on-primary-fixed-variant": "#3323cc",
+                    "secondary-fixed-dim": "#4ae176",
+                    "on-error": "#ffffff",
+                    "error-container": "#ffdad6",
+                    "error": "#ba1a1a",
+                    "surface-container-highest": "#e4e1ee",
+                    "surface-dim": "#dcd8e5",
+                    "primary": "#3525cd",
+                    "surface-variant": "#e4e1ee",
+                    "surface-tint": "#4d44e3",
+                    "primary-fixed-dim": "#c3c0ff",
+                    "primary-fixed": "#e2dfff",
+                    "secondary": "#006e2f",
+                    "on-primary": "#ffffff",
+                    "on-error-container": "#93000a",
+                    "primary-container": "#4f46e5",
+                    "on-tertiary-fixed-variant": "#7b2f00",
+                    "inverse-primary": "#c3c0ff",
+                    "surface-container": "#f0ecf9",
+                    "on-secondary": "#ffffff",
+                    "tertiary-fixed": "#ffdbcc",
+                    "surface": "#fcf8ff",
+                    "on-surface": "#1b1b24",
+                    "on-secondary-fixed-variant": "#005321",
+                    "secondary-fixed": "#6bff8f",
+                    "secondary-container": "#6bff8f",
+                    "surface-bright": "#fcf8ff",
+                    "on-tertiary-fixed": "#351000",
+                    "on-surface-variant": "#464555",
+                    "inverse-surface": "#302f39",
+                    "surface-container-low": "#f5f2ff",
+                    "surface-container-lowest": "#ffffff",
+                    "on-secondary-fixed": "#002109",
+                    "on-secondary-container": "#007432",
+                    "tertiary-container": "#a44100",
+                    "on-primary-fixed": "#0f0069",
+                    "on-primary-container": "#dad7ff",
+                    "surface-container-high": "#eae6f4",
+                    "on-background": "#1b1b24",
+                    "inverse-on-surface": "#f3effc",
+                    "background": "#fcf8ff",
+                    "tertiary-fixed-dim": "#ffb695",
+                    "on-tertiary": "#ffffff"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "xs": "8px",
+                    "gutter": "24px",
+                    "container-max": "1280px",
+                    "lg": "40px",
+                    "xl": "64px",
+                    "sm": "16px",
+                    "md": "24px",
+                    "base": "4px"
+            },
+            "fontFamily": {
+                    "label-sm": ["Inter"],
+                    "headline-md": ["Plus Jakarta Sans"],
+                    "headline-sm": ["Plus Jakarta Sans"],
+                    "body-lg": ["Inter"],
+                    "label-md": ["Inter"],
+                    "display-lg": ["Plus Jakarta Sans"],
+                    "body-md": ["Inter"]
+            },
+            "fontSize": {
+                    "label-sm": ["12px", {"lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "headline-md": ["32px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                    "headline-sm": ["24px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "label-md": ["14px", {"lineHeight": "1.4", "letterSpacing": "0.01em", "fontWeight": "500"}],
+                    "display-lg": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "body-md": ["16px", {"lineHeight": "1.5", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body { background-color: #F8FAFC; }
+        .product-card { transition: transform 0.3s ease, box-shadow 0.3s ease; }
+        .product-card:hover { transform: translateY(-4px); box-shadow: 0 12px 24px -10px rgba(79, 70, 229, 0.1); }
+        .material-symbols-outlined { font-size: 20px; vertical-align: middle; }
+    </style>
+</head>
+<body class="font-body-md text-on-background selection:bg-primary-fixed selection:text-primary">
+<!-- NAVBAR STYLE SAMA KAYAK HALAMAN UTAMA -->
+<nav class="fixed top-0 w-full z-50 bg-white/90 dark:bg-slate-900/90 backdrop-blur-md border-b border-slate-100 dark:border-slate-800 shadow-[0_4px_20px_rgba(79,70,229,0.02)]">
+
+  <div class="max-w-[1280px] mx-auto flex justify-between items-center px-8 h-20">
+
+    <!-- LOGO -->
+    <div class="text-2xl font-bold tracking-tighter text-indigo-600 dark:text-indigo-400">
+      TokoKita
+    </div>
+
+    <!-- MENU DESKTOP -->
+    <div class="hidden md:flex items-center gap-8 font-['Plus_Jakarta_Sans'] text-sm tracking-wide">
+
+      <a href="index.html"
+         class="text-slate-600 dark:text-slate-400 hover:text-indigo-500 transition-colors">
+         Beranda
+      </a>
+
+      <!-- ACTIVE PAGE -->
+      <a href="produk.html"
+         class="text-indigo-600 dark:text-indigo-400 font-semibold border-b-2 border-indigo-600 pb-1">
+         Produk
+      </a>
+
+  
+      </a>
+
+      <a href="login.html"
+         class="text-slate-600 dark:text-slate-400 hover:text-indigo-500 transition-colors">
+         Login
+      </a>
+
+    </div>
+
+    <!-- ICON -->
+    <div class="flex items-center gap-4">
+
+      <a href="keranjang.html"
+         class="p-2 text-slate-600 dark:text-slate-400 hover:opacity-80 transition-all duration-300 active:scale-95">
+        <span class="material-symbols-outlined">shopping_cart</span>
+      </a>
+
+      <a href="login.html"
+         class="p-2 text-slate-600 dark:text-slate-400 hover:opacity-80 transition-all duration-300 active:scale-95">
+        <span class="material-symbols-outlined">person</span>
+      </a>
+
+      <!-- HAMBURGER -->
+      <button id="menuBtn" class="md:hidden p-2">
+        <span class="material-symbols-outlined">menu</span>
+      </button>
+
+    </div>
+  </div>
+
+  <!-- MOBILE MENU -->
+  <div id="mobileMenu" class="hidden md:hidden bg-white dark:bg-slate-900 border-t px-6 py-4 flex flex-col gap-4 shadow">
+
+    <a href="index.html" class="text-slate-700 dark:text-slate-300">Beranda</a>
+
+    <a href="produk.html"
+       class="text-indigo-600 font-semibold">
+       Produk
+    </a>
+
+
+
+    <a href="login.html" class="text-slate-700 dark:text-slate-300">Akun</a>
+
+  </div>
+
+</nav>
+  <!-- MOBILE MENU -->
+  <div id="mobileMenu" class="hidden md:hidden bg-white border-t px-6 py-4 flex flex-col gap-3 shadow">
+
+    <a href="index.html" class="text-slate-700">Home</a>
+
+    <a href="produk.html" class="text-indigo-600 font-semibold">
+      Produk
+    </a>
+
+
+
+    <a href="login.html" class="text-slate-700">Akun</a>
+
+  </div>
+</header>
+<!-- Hero Section -->
+<section class="max-w-[1280px] mx-auto px-8 mb-xl">
+<div class="max-w-2xl">
+<h1 class="font-display-lg text-display-lg text-on-surface mb-md">Koleksi Kami</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant">
+                    Temukan berbagai aksesoris handmade unik dengan desain eksklusif dan kualitas terbaik.
+                </p>
+</div>
+</section>
+<!-- Product Grid -->
+<section class="max-w-[1280px] mx-auto px-8">
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-gutter">
+<!-- GELANG -->
+<article class="product-card bg-white rounded-xl overflow-hidden shadow-[0_4px_12px_rgba(0,0,0,0.02)] flex flex-col">
+<div class="relative group">
+<img class="w-full h-72 object-cover transition-transform duration-500 group-hover:scale-105" data-alt="close-up of a delicate minimalist knitted bracelet in beige cotton thread on a white marble surface" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBGRCVLaFuc-XVJOj24N4DuCuI2Fe027TqtiVStZ_Cy29Cf3VMZAJoy89YxK_-CPFK98mvif8CF7woBF4eSRYJS3R96xHBgkllSsHFj3EyW30ulNBvvkyK-vhoYTTeK-OYPbx9aeH2R1vyMjA7MSPNEJOo4NTfLKJ_Ez62Bbet77xP7IoU1PvylmRzL_hsagYl2VAD-W_KWee0Cqw1KvyaOotdylhcWFacXKbehecMVMRAlZxD5fgKKadXLzzNpOo_xCrRQza8rYmUj"/>
+<span class="absolute top-4 left-4 bg-secondary-container text-on-secondary-container px-3 py-1 rounded-full font-label-sm text-label-sm uppercase">Baru</span>
+</div>
+<div class="p-sm flex-grow flex flex-col">
+<h3 class="font-headline-sm text-label-md text-on-surface mb-1">Gelang Rajut Minimal</h3>
+<p class="font-body-md text-label-sm text-on-surface-variant mb-4 line-clamp-1">Tekstur rajutan tangan yang lembut dan elegan.</p>
+<div class="mt-auto flex items-center justify-between">
+<span class="font-headline-sm text-label-md text-primary">Rp 85.000</span>
+<button 
+  class="add-to-cart bg-primary text-on-primary p-2 rounded-lg"
+  data-name="Gelang Rajut Minimal"
+  data-price="85000"
+  data-image="https://lh3.googleusercontent.com/aida-public/AB6AXuBJSSraWiAgv9fDz9w8apnXG5xc6fuGwJs4csibx0N6ygAlX8fvHq92SvlPxw5aZn69aEv6phRuIfMzMmZ59HBY5ojGjBZiMuDRh_GFBMdSDFLTrCgQvkiM0B9D__PEC0OnOc2ffPhTSF0SgZJzv0MKjiY7o-AHlHtXM6TJD85w4hxZo3dIJvhIh7ifKZuQjhLLsJpnu0j5cE3T33EUHxENhxdk1m5YwapQd617IxsZYP9Va-9jKmE9hMGnq11rX3_8nbUqXNzaUFwY"
+>
+  <span class="material-symbols-outlined">add_shopping_cart</span>
+</button>
+</div>
+</div>
+</article>
+<article class="product-card bg-white rounded-xl overflow-hidden shadow-[0_4px_12px_rgba(0,0,0,0.02)] flex flex-col">
+<div class="relative group">
+<img class="w-full h-72 object-cover transition-transform duration-500 group-hover:scale-105" data-alt="close-up of handcrafted pastel colored bead bracelet with small golden charms on a soft linen fabric" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBJSSraWiAgv9fDz9w8apnXG5xc6fuGwJs4csibx0N6ygAlX8fvHq92SvlPxw5aZn69aEv6phRuIfMzMmZ59HBY5ojGjBZiMuDRh_GFBMdSDFLTrCgQvkiM0B9D__PEC0OnOc2ffPhTSF0SgZJzv0MKjiY7o-AHlHtXM6TJD85w4hxZo3dIJvhIh7ifKZuQjhLLsJpnu0j5cE3T33EUHxENhxdk1m5YwapQd617IxsZYP9Va-9jKmE9hMGnq11rX3_8nbUqXNzaUFwY"/>
+<span class="absolute top-4 left-4 bg-tertiary-container text-on-tertiary-container px-3 py-1 rounded-full font-label-sm text-label-sm uppercase">Best Seller</span>
+</div>
+<div class="p-sm flex-grow flex flex-col">
+<h3 class="font-headline-sm text-label-md text-on-surface mb-1">Gelang Manik Pastel</h3>
+<p class="font-body-md text-label-sm text-on-surface-variant mb-4 line-clamp-1">Kombinasi warna pastel yang manis dan ceria.</p>
+<div class="mt-auto flex items-center justify-between">
+<span class="font-headline-sm text-label-md text-primary">Rp 65.000</span>
+<button 
+  class="add-to-cart bg-primary text-on-primary p-2 rounded-lg"
+  data-name="Gelang Manik Pastel"
+  data-price="65000"
+  data-image="https://lh3.googleusercontent.com/aida-public/AB6AXuBJSSraWiAgv9fDz9w8apnXG5xc6fuGwJs4csibx0N6ygAlX8fvHq92SvlPxw5aZn69aEv6phRuIfMzMmZ59HBY5ojGjBZiMuDRh_GFBMdSDFLTrCgQvkiM0B9D__PEC0OnOc2ffPhTSF0SgZJzv0MKjiY7o-AHlHtXM6TJD85w4hxZo3dIJvhIh7ifKZuQjhLLsJpnu0j5cE3T33EUHxENhxdk1m5YwapQd617IxsZYP9Va-9jKmE9hMGnq11rX3_8nbUqXNzaUFwY"
+>
+  <span class="material-symbols-outlined">add_shopping_cart</span>
+</button>
+</div>
+</div>
+</article>
+<article class="product-card bg-white rounded-xl overflow-hidden shadow-[0_4px_12px_rgba(0,0,0,0.02)] flex flex-col">
+  <div class="relative group">
+    <img class="w-full h-72 object-cover transition-transform duration-500 group-hover:scale-105"
+      src="https://lh3.googleusercontent.com/aida-public/AB6AXuC5eU4iuDBVN6cTJuwW8SZ4qLtaMpetEqbuhSlwxbWkvWrWT3ptimWhzhvAETraG-8Moq2Y3YZD_xaGFF8KQOhKYC97VPXoaMPIzHzpdY-0gbRhgjFD9FHJOr1J42_8MKKNe4tQoFLAgy84s32nk-qSIDWSYosqOBbN5m_HsDnhbpzHgcr_GdSgW7Z9AXHylBi4YOOhGKunfnnrwipbLXf04ZqOTnOKC9-zOKcWcoOl4qvRCQDhI9lhDFj380UoAPsV7Z1LznmnEq-q"
+      alt="Gelang Bohemian Handmade">
+  </div>
+
+  <div class="p-sm flex-grow flex flex-col">
+    <h3 class="font-headline-sm text-label-md text-on-surface mb-1">
+      Gelang Bohemian Handmade
+    </h3>
+
+    <p class="font-body-md text-label-sm text-on-surface-variant mb-4 line-clamp-1">
+      Gaya etnik dengan detail anyaman yang rumit.
+    </p>
+
+    <div class="mt-auto flex items-center justify-between">
+      <span class="font-headline-sm text-label-md text-primary">
+        Rp 95.000
+      </span>
+
+      <!-- 🔥 INI YANG PENTING -->
+      <button 
+        class="add-to-cart bg-primary text-on-primary p-2 rounded-lg hover:brightness-95 transition-all active:-translate-y-px"
+        data-name="Gelang Bohemian Handmade"
+        data-price="95000"
+        data-image="https://lh3.googleusercontent.com/aida-public/AB6AXuC5eU4iuDBVN6cTJuwW8SZ4qLtaMpetEqbuhSlwxbWkvWrWT3ptimWhzhvAETraG-8Moq2Y3YZD_xaGFF8KQOhKYC97VPXoaMPIzHzpdY-0gbRhgjFD9FHJOr1J42_8MKKNe4tQoFLAgy84s32nk-qSIDWSYosqOBbN5m_HsDnhbpzHgcr_GdSgW7Z9AXHylBi4YOOhGKunfnnrwipbLXf04ZqOTnOKC9-zOKcWcoOl4qvRCQDhI9lhDFj380UoAPsV7Z1LznmnEq-q"
+      >
+        <span class="material-symbols-outlined">add_shopping_cart</span>
+      </button>
+    </div>
+  </div>
+</article>
+</article>
+<article class="product-card bg-white rounded-xl overflow-hidden shadow-[0_4px_12px_rgba(0,0,0,0.02)] flex flex-col">
+  <div class="relative group">
+    <img class="w-full h-72 object-cover transition-transform duration-500 group-hover:scale-105"
+      src="https://lh3.googleusercontent.com/aida-public/AB6AXuCJKXq2xtkmxK_hSB1d7H2GQ6Ojdb8Xfvs1T2Cvfz9d9wtdLnoAEJWGgDk97UAAM9zyMf43u0-rc-84l_daPg5iskvt8QiXU62IPU9a0-6SPVY-nlQwuoZhvzRVKFO0Zt_ytfw4jtDU0R1gDDVZDEjo8RiamC8etzqpqozh-HPW76buoz4BJvvmJbtenjiLuu2WVZc-DNWpYLbL3NktMT--pJtvHltYuu74pYkG3mdMTelCTDg0jqyTMShEALmjH9sQ485OfIyKMoFz"
+      alt="Gelang Tali Vintage">
+  </div>
+
+  <div class="p-sm flex-grow flex flex-col">
+    <h3 class="font-headline-sm text-label-md text-on-surface mb-1">
+      Gelang Tali Vintage
+    </h3>
+
+    <p class="font-body-md text-label-sm text-on-surface-variant mb-4 line-clamp-1">
+      Tahan lama dengan sentuhan aksen perunggu klasik.
+    </p>
+
+    <div class="mt-auto flex items-center justify-between">
+      <span class="font-headline-sm text-label-md text-primary">
+        Rp 55.000
+      </span>
+
+      <!-- 🔥 FIX -->
+      <button 
+        class="add-to-cart bg-primary text-on-primary p-2 rounded-lg hover:brightness-95 transition-all active:-translate-y-px"
+        data-name="Gelang Tali Vintage"
+        data-price="55000"
+        data-image="https://lh3.googleusercontent.com/aida-public/AB6AXuCJKXq2xtkmxK_hSB1d7H2GQ6Ojdb8Xfvs1T2Cvfz9d9wtdLnoAEJWGgDk97UAAM9zyMf43u0-rc-84l_daPg5iskvt8QiXU62IPU9a0-6SPVY-nlQwuoZhvzRVKFO0Zt_ytfw4jtDU0R1gDDVZDEjo8RiamC8etzqpqozh-HPW76buoz4BJvvmJbtenjiLuu2WVZc-DNWpYLbL3NktMT--pJtvHltYuu74pYkG3mdMTelCTDg0jqyTMShEALmjH9sQ485OfIyKMoFz"
+      >
+        <span class="material-symbols-outlined">add_shopping_cart</span>
+      </button>
+    </div>
+  </div>
+</article>
+<!-- KALUNG -->
+<article class="product-card bg-white rounded-xl overflow-hidden shadow-[0_4px_12px_rgba(0,0,0,0.02)] flex flex-col">
+  <div class="relative group">
+    <img class="w-full h-72 object-cover transition-transform duration-500 group-hover:scale-105"
+      src="https://lh3.googleusercontent.com/aida-public/AB6AXuBxeIWOIawaEU0LEOKY7LKIUMm3lOw-uHjZEKdQkGsHQzQrJit_Tx5Zj_6YL6rctctWq1_aCez2PPKEkYS7k7y82XgKRD9RzuL2DeUezFEwCHMVP00vgqWfjkjB9gFAmv4csJfd7TwuCno1eMuEX9b7U7Oixd9xRA-4V3plx_C_zZ6AvwY25ygxQIfcLpBWRba7U6Qwk6GgdCX3ioir2llD7fQKNONZcReXUfdLb21q8Vhj601o58rL_0s7FNx9Sw4xV2_maqtJthv6"
+      alt="Kalung Minimal Gold">
+      
+    <span class="absolute top-4 left-4 bg-secondary-container text-on-secondary-container px-3 py-1 rounded-full font-label-sm text-label-sm uppercase">
+      Baru
+    </span>
+  </div>
+
+  <div class="p-sm flex-grow flex flex-col">
+    <h3 class="font-headline-sm text-label-md text-on-surface mb-1">
+      Kalung Minimal Gold
+    </h3>
+
+    <p class="font-body-md text-label-sm text-on-surface-variant mb-4 line-clamp-1">
+      Rantai tipis berkualitas tinggi dengan lapisan emas.
+    </p>
+
+    <div class="mt-auto flex items-center justify-between">
+      <span class="font-headline-sm text-label-md text-primary">
+        Rp 120.000
+      </span>
+
+      <!-- 🔥 FIX -->
+      <button 
+        class="add-to-cart bg-primary text-on-primary p-2 rounded-lg hover:brightness-95 transition-all active:-translate-y-px"
+        data-name="Kalung Minimal Gold"
+        data-price="120000"
+        data-image="https://lh3.googleusercontent.com/aida-public/AB6AXuBxeIWOIawaEU0LEOKY7LKIUMm3lOw-uHjZEKdQkGsHQzQrJit_Tx5Zj_6YL6rctctWq1_aCez2PPKEkYS7k7y82XgKRD9RzuL2DeUezFEwCHMVP00vgqWfjkjB9gFAmv4csJfd7TwuCno1eMuEX9b7U7Oixd9xRA-4V3plx_C_zZ6AvwY25ygxQIfcLpBWRba7U6Qwk6GgdCX3ioir2llD7fQKNONZcReXUfdLb21q8Vhj601o58rL_0s7FNx9Sw4xV2_maqtJthv6"
+      >
+        <span class="material-symbols-outlined">add_shopping_cart</span>
+      </button>
+    </div>
+  </div>
+</article>
+<article class="product-card bg-white rounded-xl overflow-hidden shadow-[0_4px_12px_rgba(0,0,0,0.02)] flex flex-col">
+  <div class="relative group">
+    <img class="w-full h-72 object-cover transition-transform duration-500 group-hover:scale-105"
+      src="https://lh3.googleusercontent.com/aida-public/AB6AXuABxXtUbxghJgeKE3E82xfgztnoGLCpAvut7FbHaEQxo90qK3pGG_oMYgLA-znD9JM02WKx6exVIkE4FYFsGTyJC36kPJcw0tdHwnvqOZ2-4_ii9tw5ZU3V7rR05jHvtjq4_mpyLk1lhsiPfwe-fdC7KIZrVyK09DjZHZ_DUZeIJ_9o9gsimuVht_q44bYN8AWteULk936knkbslHjxLDO6LZWSY11ToT6ajZwgCsYpDEHI18fHxvuKU18aXaIM8ihY3Cc4BCIkrdto"
+      alt="Kalung Layering Estetik">
+  </div>
+
+  <div class="p-sm flex-grow flex flex-col">
+    <h3 class="font-headline-sm text-label-md text-on-surface mb-1">
+      Kalung Layering Estetik
+    </h3>
+
+    <p class="font-body-md text-label-sm text-on-surface-variant mb-4 line-clamp-1">
+      Satu set kalung tumpuk untuk tampilan modern.
+    </p>
+
+    <div class="mt-auto flex items-center justify-between">
+      <span class="font-headline-sm text-label-md text-primary">
+        Rp 145.000
+      </span>
+
+      <!-- 🔥 FIX -->
+      <button 
+        class="add-to-cart bg-primary text-on-primary p-2 rounded-lg hover:brightness-95 transition-all active:-translate-y-px"
+        data-name="Kalung Layering Estetik"
+        data-price="145000"
+        data-image="https://lh3.googleusercontent.com/aida-public/AB6AXuABxXtUbxghJgeKE3E82xfgztnoGLCpAvut7FbHaEQxo90qK3pGG_oMYgLA-znD9JM02WKx6exVIkE4FYFsGTyJC36kPJcw0tdHwnvqOZ2-4_ii9tw5ZU3V7rR05jHvtjq4_mpyLk1lhsiPfwe-fdC7KIZrVyK09DjZHZ_DUZeIJ_9o9gsimuVht_q44bYN8AWteULk936knkbslHjxLDO6LZWSY11ToT6ajZwgCsYpDEHI18fHxvuKU18aXaIM8ihY3Cc4BCIkrdto"
+      >
+        <span class="material-symbols-outlined">add_shopping_cart</span>
+      </button>
+    </div>
+  </div>
+</article>
+<article class="product-card bg-white rounded-xl overflow-hidden shadow-[0_4px_12px_rgba(0,0,0,0.02)] flex flex-col">
+  <div class="relative group">
+    <img class="w-full h-72 object-cover transition-transform duration-500 group-hover:scale-105"
+      src="https://lh3.googleusercontent.com/aida-public/AB6AXuDrnPjgGLRLyCiOA27T74YvtKSHWvHcInxr1_VzpMSYqNPcup2rzgcJI6tp1kQodGtbTBfFblURYpU3VeMwzFJhag9tGxMXgy1VXAc6Yjh1BEaJO4pmXChYis95lrkaj69hy5wrRGOCTHsON93E1jZEEag3AC388ynN-8LQo4y3z4TDeUXYXGbacSvagMpIobagalipi0vlcukZBoebUcrRz_E0oLlUOsKzcsgGhYLdBA7LOVBGKgvxeO1YX_420RC-4qk89NhxErlN"
+      alt="Kalung Pendant Handmade">
+  </div>
+
+  <div class="p-sm flex-grow flex flex-col">
+    <h3 class="font-headline-sm text-label-md text-on-surface mb-1">
+      Kalung Pendant Handmade
+    </h3>
+
+    <p class="font-body-md text-label-sm text-on-surface-variant mb-4 line-clamp-1">
+      Pendant unik hasil pahatan tangan seniman lokal.
+    </p>
+
+    <div class="mt-auto flex items-center justify-between">
+      <span class="font-headline-sm text-label-md text-primary">
+        Rp 110.000
+      </span>
+
+      <!-- 🔥 FIX -->
+      <button 
+        class="add-to-cart bg-primary text-on-primary p-2 rounded-lg hover:brightness-95 transition-all active:-translate-y-px"
+        data-name="Kalung Pendant Handmade"
+        data-price="110000"
+        data-image="https://lh3.googleusercontent.com/aida-public/AB6AXuDrnPjgGLRLyCiOA27T74YvtKSHWvHcInxr1_VzpMSYqNPcup2rzgcJI6tp1kQodGtbTBfFblURYpU3VeMwzFJhag9tGxMXgy1VXAc6Yjh1BEaJO4pmXChYis95lrkaj69hy5wrRGOCTHsON93E1jZEEag3AC388ynN-8LQo4y3z4TDeUXYXGbacSvagMpIobagalipi0vlcukZBoebUcrRz_E0oLlUOsKzcsgGhYLdBA7LOVBGKgvxeO1YX_420RC-4qk89NhxErlN"
+      >
+        <span class="material-symbols-outlined">add_shopping_cart</span>
+      </button>
+    </div>
+  </div>
+</article>
+<article class="product-card bg-white rounded-xl overflow-hidden shadow-[0_4px_12px_rgba(0,0,0,0.02)] flex flex-col">
+  <div class="relative group">
+    <img class="w-full h-72 object-cover transition-transform duration-500 group-hover:scale-105"
+      src="https://lh3.googleusercontent.com/aida-public/AB6AXuB7xmyZ6jM0aerotIrXGsCQwliM2uU6hcs2bKhfuGgxI98eyK_oAKV7c36HamrqRTHegEDrqorH3YAf23ygaqmdYYnnRv8gIZRROwI7lkSf_H7VTQ7UGVlntpKxM2FVLM7pmY8B0qLnVKGDWRAztWDm7oQfm8mm_TJewBr-WXJ3BGxsIJbhuoi8k6fXCo_pNk6RxMdceaQLIrTqT57O4l3qM_r1ohNnjy8blUCGZdkBgf7ObUJJto8dgxw5dLkDhVUavQputgvu0c4K"
+      alt="Kalung Vintage Chic">
+
+    <span class="absolute top-4 left-4 bg-tertiary-container text-on-tertiary-container px-3 py-1 rounded-full font-label-sm text-label-sm uppercase">
+      Best Seller
+    </span>
+  </div>
+
+  <div class="p-sm flex-grow flex flex-col">
+    <h3 class="font-headline-sm text-label-md text-on-surface mb-1">
+      Kalung Vintage Chic
+    </h3>
+
+    <p class="font-body-md text-label-sm text-on-surface-variant mb-4 line-clamp-1">
+      Kesan nostalgia dengan ukiran detail klasik.
+    </p>
+
+    <div class="mt-auto flex items-center justify-between">
+      <span class="font-headline-sm text-label-md text-primary">
+        Rp 135.000
+      </span>
+
+      <!-- FIX -->
+      <button 
+        class="add-to-cart bg-primary text-on-primary p-2 rounded-lg hover:brightness-95 transition-all active:-translate-y-px"
+        data-name="Kalung Vintage Chic"
+        data-price="135000"
+        data-image="https://lh3.googleusercontent.com/aida-public/AB6AXuB7xmyZ6jM0aerotIrXGsCQwliM2uU6hcs2bKhfuGgxI98eyK_oAKV7c36HamrqRTHegEDrqorH3YAf23ygaqmdYYnnRv8gIZRROwI7lkSf_H7VTQ7UGVlntpKxM2FVLM7pmY8B0qLnVKGDWRAztWDm7oQfm8mm_TJewBr-WXJ3BGxsIJbhuoi8k6fXCo_pNk6RxMdceaQLIrTqT57O4l3qM_r1ohNnjy8blUCGZdkBgf7ObUJJto8dgxw5dLkDhVUavQputgvu0c4K"
+      >
+        <span class="material-symbols-outlined">add_shopping_cart</span>
+      </button>
+    </div>
+  </div>
+</article>
+<!-- CINCIN -->
+<article class="product-card bg-white rounded-xl overflow-hidden shadow-[0_4px_12px_rgba(0,0,0,0.02)] flex flex-col">
+  <div class="relative group">
+    <img class="w-full h-72 object-cover transition-transform duration-500 group-hover:scale-105"
+      src="https://lh3.googleusercontent.com/aida-public/AB6AXuC6tXJV79Tu-2uopiVl23RZPqumnXI-E3SYStCO63I3OT4QF8syh2Gohz_IF3FnqlkGMVSGk7RNkjwOOXfPfpP2Fn9sDvq6dGhm6rbJ3shH8Su-QQ3zp2_w9EibFK6fpAxoNGgmiOL4Vw6UXCMjiBeaycNVzRb_53iXr9NnElFVMNMkbPE-xN1J8i1BMA-SxiYpvekeMMkrp62rhtO_4899UYYJz-EhbDe7wKnj-kK4eqdcONu7IUR6TPmbuwAannHQ1C9orLv26bmE"
+      alt="Cincin Handmade Unik">
+  </div>
+
+  <div class="p-sm flex-grow flex flex-col">
+    <h3 class="font-headline-sm text-label-md text-on-surface mb-1">
+      Cincin Handmade Unik
+    </h3>
+
+    <p class="font-body-md text-label-sm text-on-surface-variant mb-4 line-clamp-1">
+      Tekstur palu manual yang memberikan karakter khas.
+    </p>
+
+    <div class="mt-auto flex items-center justify-between">
+      <span class="font-headline-sm text-label-md text-primary">
+        Rp 75.000
+      </span>
+
+      <!-- 🔥 FIX -->
+      <button 
+        class="add-to-cart bg-primary text-on-primary p-2 rounded-lg hover:brightness-95 transition-all active:-translate-y-px"
+        data-name="Cincin Handmade Unik"
+        data-price="75000"
+        data-image="https://lh3.googleusercontent.com/aida-public/AB6AXuC6tXJV79Tu-2uopiVl23RZPqumnXI-E3SYStCO63I3OT4QF8syh2Gohz_IF3FnqlkGMVSGk7RNkjwOOXfPfpP2Fn9sDvq6dGhm6rbJ3shH8Su-QQ3zp2_w9EibFK6fpAxoNGgmiOL4Vw6UXCMjiBeaycNVzRb_53iXr9NnElFVMNMkbPE-xN1J8i1BMA-SxiYpvekeMMkrp62rhtO_4899UYYJz-EhbDe7wKnj-kK4eqdcONu7IUR6TPmbuwAannHQ1C9orLv26bmE"
+      >
+        <span class="material-symbols-outlined">add_shopping_cart</span>
+      </button>
+    </div>
+  </div>
+</article>
+<article class="product-card bg-white rounded-xl overflow-hidden shadow-[0_4px_12px_rgba(0,0,0,0.02)] flex flex-col">
+  <div class="relative group">
+    <img class="w-full h-72 object-cover transition-transform duration-500 group-hover:scale-105" 
+      src="https://lh3.googleusercontent.com/aida-public/AB6AXuD7BSmlKCZO-1KlEH7edsMMTQT1GOSymg7sOw9LMYGlF0ZXOmv_2dOtQlWmbN84T-Z7V4Lglyx-f5xbNcN5nVRNrhzppS56FddQztR_Wrz8gw7smKhIda24pdOJp61vMotBHjUAm-uvZLIX4G_L46ryqDJPKjPrOFxspMSfle7qgaeYUUrhlivHsx4F3hMaoj_zzTU-QPkC7gblQjp3dx8LV0tQbu_U-b77VeyteQWOtijlj1lVPMhH3oqJuOCqp2OHx6xmBDGHTdK-" 
+      alt="Cincin Adjustable Minimal"/>
+    
+    <span class="absolute top-4 left-4 bg-secondary-container text-on-secondary-container px-3 py-1 rounded-full font-label-sm text-label-sm uppercase">
+      Baru
+    </span>
+  </div>
+
+  <div class="p-sm flex-grow flex flex-col">
+    <h3 class="font-headline-sm text-label-md text-on-surface mb-1">
+      Cincin Adjustable Minimal
+    </h3>
+
+    <p class="font-body-md text-label-sm text-on-surface-variant mb-4 line-clamp-1">
+      Bisa disesuaikan ukurannya, sangat fleksibel.
+    </p>
+
+    <div class="mt-auto flex items-center justify-between">
+      <span class="font-headline-sm text-label-md text-primary">
+        Rp 45.000
+      </span>
+
+      <button 
+        class="add-to-cart bg-primary text-on-primary p-2 rounded-lg"
+        data-name="Cincin Adjustable Minimal"
+        data-price="45000"
+        data-image="https://lh3.googleusercontent.com/aida-public/AB6AXuD7BSmlKCZO-1KlEH7edsMMTQT1GOSymg7sOw9LMYGlF0ZXOmv_2dOtQlWmbN84T-Z7V4Lglyx-f5xbNcN5nVRNrhzppS56FddQztR_Wrz8gw7smKhIda24pdOJp61vMotBHjUAm-uvZLIX4G_L46ryqDJPKjPrOFxspMSfle7qgaeYUUrhlivHsx4F3hMaoj_zzTU-QPkC7gblQjp3dx8LV0tQbu_U-b77VeyteQWOtijlj1lVPMhH3oqJuOCqp2OHx6xmBDGHTdK-"
+      >
+        <span class="material-symbols-outlined">add_shopping_cart</span>
+      </button>
+    </div>
+  </div>
+</article>
+<article class="product-card bg-white rounded-xl overflow-hidden shadow-[0_4px_12px_rgba(0,0,0,0.02)] flex flex-col">
+  <div class="relative group">
+    <img class="w-full h-72 object-cover transition-transform duration-500 group-hover:scale-105" 
+      src="https://lh3.googleusercontent.com/aida-public/AB6AXuBPXW43Kv6z0eWij5BsnyZkZKAOKybQKmOO0OA0XM3RlPZ3gl2A34ZUHM726cUvTrfN_lcfLmhUeH-VLhELkVSkXzY4vqG5Upkwj5ENQLnW6YzveozvPavvObTeqV-pVEss46yO6wFlftTEoDzqSxa93NLdaYsL1fRWAtPj04i1VZ1WWVz-W6jAxK7UxeQxXuV__o6TJYJMgQ0WXbqNs11oytjjT1WBZjK0XNVAEIk_cI_hEg9QgnnHwxfTwW7s50KROR2ZFHUIhtLE" 
+      alt="Cincin Silver Estetik"/>
+  </div>
+
+  <div class="p-sm flex-grow flex flex-col">
+    <h3 class="font-headline-sm text-label-md text-on-surface mb-1">
+      Cincin Silver Estetik
+    </h3>
+
+    <p class="font-body-md text-label-sm text-on-surface-variant mb-4 line-clamp-1">
+      Kilau perak murni dengan bentuk lengkung indah.
+    </p>
+
+    <div class="mt-auto flex items-center justify-between">
+      <span class="font-headline-sm text-label-md text-primary">
+        Rp 115.000
+      </span>
+
+      <button 
+        class="add-to-cart bg-primary text-on-primary p-2 rounded-lg"
+        data-name="Cincin Silver Estetik"
+        data-price="115000"
+        data-image="https://lh3.googleusercontent.com/aida-public/AB6AXuBPXW43Kv6z0eWij5BsnyZkZKAOKybQKmOO0OA0XM3RlPZ3gl2A34ZUHM726cUvTrfN_lcfLmhUeH-VLhELkVSkXzY4vqG5Upkwj5ENQLnW6YzveozvPavvObTeqV-pVEss46yO6wFlftTEoDzqSxa93NLdaYsL1fRWAtPj04i1VZ1WWVz-W6jAxK7UxeQxXuV__o6TJYJMgQ0WXbqNs11oytjjT1WBZjK0XNVAEIk_cI_hEg9QgnnHwxfTwW7s50KROR2ZFHUIhtLE"
+      >
+        <span class="material-symbols-outlined">add_shopping_cart</span>
+      </button>
+    </div>
+  </div>
+</article>
+<article class="product-card bg-white rounded-xl overflow-hidden shadow-[0_4px_12px_rgba(0,0,0,0.02)] flex flex-col">
+  <div class="relative group">
+    <img class="w-full h-72 object-cover transition-transform duration-500 group-hover:scale-105" 
+      src="https://lh3.googleusercontent.com/aida-public/AB6AXuAMfQaXCBswEm7YvwHy5B-Sw9be21dzjieyPjmNZSdNwEwvsFJdBV7_7epVSyng-gxJSGn6SmIVMyZbP36MSOf2TN_gm2kVN9Ccfun8QZJUYBapVktvsAkLw5HlLbvPA5nGnkREbOQn6uFDeHF3AGg3H79LoIYHyDDwwZrg9WhvtK5-E7xUXxuAx772kHeRjnQsb7PknVUkA7e9-BYAgsR9ulUM7H_oIaDmd-qV5Qm-j-J_P4rquBFulLoqnGeuY4pTl20aDZ9BpVn2" 
+      alt="Cincin Artistik Handmade"/>
+  </div>
+
+  <div class="p-sm flex-grow flex flex-col">
+    <h3 class="font-headline-sm text-label-md text-on-surface mb-1">
+      Cincin Artistik Handmade
+    </h3>
+
+    <p class="font-body-md text-label-sm text-on-surface-variant mb-4 line-clamp-1">
+      Perpaduan kawat tembaga dan batu alam mentah.
+    </p>
+
+    <div class="mt-auto flex items-center justify-between">
+      <span class="font-headline-sm text-label-md text-primary">
+        Rp 88.000
+      </span>
+
+      <button 
+        class="add-to-cart bg-primary text-on-primary p-2 rounded-lg"
+        data-name="Cincin Artistik Handmade"
+        data-price="88000"
+        data-image="https://lh3.googleusercontent.com/aida-public/AB6AXuAMfQaXCBswEm7YvwHy5B-Sw9be21dzjieyPjmNZSdNwEwvsFJdBV7_7epVSyng-gxJSGn6SmIVMyZbP36MSOf2TN_gm2kVN9Ccfun8QZJUYBapVktvsAkLw5HlLbvPA5nGnkREbOQn6uFDeHF3AGg3H79LoIYHyDDwwZrg9WhvtK5-E7xUXxuAx772kHeRjnQsb7PknVUkA7e9-BYAgsR9ulUM7H_oIaDmd-qV5Qm-j-J_P4rquBFulLoqnGeuY4pTl20aDZ9BpVn2"
+      >
+        <span class="material-symbols-outlined">add_shopping_cart</span>
+      </button>
+    </div>
+  </div>
+</article>
+<!-- TAS -->
+<article class="product-card bg-white rounded-xl overflow-hidden shadow-[0_4px_12px_rgba(0,0,0,0.02)] flex flex-col">
+  <div class="relative group">
+    <img class="w-full h-72 object-cover transition-transform duration-500 group-hover:scale-105" 
+      src="https://lh3.googleusercontent.com/aida-public/AB6AXuCbT9FzNVjnu6zZmSXF_i-rZTJc3itAvpePK8uqVhLfOCwMaNLkei9w03_sw3AyXnxe5YbACLeHwhFVlwn_CxMVKzt0oLeAy17QM2EqfPrNgC0xRwoXMAVPBS5HRqQOHIt8D5pAQlamchyee6EFoJfInSGVYocWCtIeZ0GEEDhzAmaav8E8RTLyFSg8gxKoIVydMFyxZYqEVDHO9LHymYBpWH8g885jCtPRTFKNeZONu8G0CR1BhkvmByhP-LGuiqnOYo3xaRwXi9At"
+      alt="Tas Rajut Mini"/>
+
+    <span class="absolute top-4 left-4 bg-tertiary-container text-on-tertiary-container px-3 py-1 rounded-full font-label-sm text-label-sm uppercase">
+      Best Seller
+    </span>
+  </div>
+
+  <div class="p-sm flex-grow flex flex-col">
+    <h3 class="font-headline-sm text-label-md text-on-surface mb-1">
+      Tas Rajut Mini
+    </h3>
+
+    <p class="font-body-md text-label-sm text-on-surface-variant mb-4 line-clamp-1">
+      Praktis untuk membawa kebutuhan esensial harian.
+    </p>
+
+    <div class="mt-auto flex items-center justify-between">
+      <span class="font-headline-sm text-label-md text-primary">
+        Rp 185.000
+      </span>
+
+      <button 
+        class="add-to-cart bg-primary text-on-primary p-2 rounded-lg"
+        data-name="Tas Rajut Mini"
+        data-price="185000"
+        data-image="https://lh3.googleusercontent.com/aida-public/AB6AXuCbT9FzNVjnu6zZmSXF_i-rZTJc3itAvpePK8uqVhLfOCwMaNLkei9w03_sw3AyXnxe5YbACLeHwhFVlwn_CxMVKzt0oLeAy17QM2EqfPrNgC0xRwoXMAVPBS5HRqQOHIt8D5pAQlamchyee6EFoJfInSGVYocWCtIeZ0GEEDhzAmaav8E8RTLyFSg8gxKoIVydMFyxZYqEVDHO9LHymYBpWH8g885jCtPRTFKNeZONu8G0CR1BhkvmByhP-LGuiqnOYo3xaRwXi9At"
+      >
+        <span class="material-symbols-outlined">add_shopping_cart</span>
+      </button>
+    </div>
+  </div>
+</article>
+<article class="product-card bg-white rounded-xl overflow-hidden shadow-[0_4px_12px_rgba(0,0,0,0.02)] flex flex-col">
+  <div class="relative group">
+  <img class="w-full h-72 object-cover transition-transform duration-500 group-hover:scale-105" 
+  data-alt="vintage style hand-knitted handbag with wooden handles on a rustic table" 
+  src="https://lh3.googleusercontent.com/aida-public/AB6AXuDpYXkGlnrRGnYUFuJlW-kfygJTmqOk8UwZXxAFYIxBCsAsYGbczakuqBjDe6nkvJ-iB_t63_754K-K1_ULhnetZ0ctHQ2vFw9H6e8JtZxh7Bgq-HKwrceeNcPVdj7h8oEa1y3AFslkLEtLHETjjTbApf9_2VEosPJWEXoh1_FoTG0nAWHcc14UINblrhVnf1zHFdEJqlBFVm1keIQSyGnk4uEaoi4t1GbBmqG4dE7ZfMNkPCQWNHLVJTiTjbx4zF6iBQrCOQoSoYYI"/>
+  <span class="absolute top-4 left-4 bg-secondary-container text-on-secondary-container px-3 py-1 rounded-full font-label-sm text-label-sm uppercase">Baru</span>
+  </div>
+  
+  <div class="p-sm flex-grow flex flex-col">
+  <h3 class="font-headline-sm text-label-md text-on-surface mb-1">Tas Rajut Vintage</h3>
+  <p class="font-body-md text-label-sm text-on-surface-variant mb-4 line-clamp-1">Aksen gagang kayu yang menambah kesan klasik.</p>
+  
+  <div class="mt-auto flex items-center justify-between">
+  <span class="font-headline-sm text-label-md text-primary">Rp 245.000</span>
+  
+  <button class="add-to-cart bg-primary text-on-primary p-2 rounded-lg hover:brightness-95 transition-all active:-translate-y-px"
+  data-name="Tas Rajut Vintage"
+  data-price="245000"
+  data-image="https://lh3.googleusercontent.com/aida-public/AB6AXuDpYXkGlnrRGnYUFuJlW-kfygJTmqOk8UwZXxAFYIxBCsAsYGbczakuqBjDe6nkvJ-iB_t63_754K-K1_ULhnetZ0ctHQ2vFw9H6e8JtZxh7Bgq-HKwrceeNcPVdj7h8oEa1y3AFslkLEtLHETjjTbApf9_2VEosPJWEXoh1_FoTG0nAWHcc14UINblrhVnf1zHFdEJqlBFVm1keIQSyGnk4uEaoi4t1GbBmqG4dE7ZfMNkPCQWNHLVJTiTjbx4zF6iBQrCOQoSoYYI">
+  <span class="material-symbols-outlined">add_shopping_cart</span>
+  </button>
+  
+  </div>
+  </div>
+  </article>
+<article class="product-card bg-white rounded-xl overflow-hidden shadow-[0_4px_12px_rgba(0,0,0,0.02)] flex flex-col">
+  <div class="relative group">
+  <img class="w-full h-72 object-cover transition-transform duration-500 group-hover:scale-105"
+  data-alt="modern handmade macrame handbag in olive green hanging from a minimal hook"
+  src="https://lh3.googleusercontent.com/aida-public/AB6AXuBqetCZA0qNkYnEgeHC_dteIOVbu5w5fPlMjyPr6qAQIaYHNgp35bpvBRPqz7k-_vUIHEdYNn3lw9RrUvO3TJqq-5iMJ4Wjms08NG4k1jICrI3OU3p1WToMRqcfll4oTG-ZaEFqMhFoJss4K-9vB5pd2_2tAmpy2kKKwCDxzH9mZDoiix6J-M_hhIbI4THQHA_JZD5LXr24yrkkhITBVX5oFQ_JH2-x7FKt8tkDTSVnQWn_dY937Au6Mf--P3oyBzVMev_Caig8kDnB"/>
+  </div>
+  
+  <div class="p-sm flex-grow flex flex-col">
+  <h3 class="font-headline-sm text-label-md text-on-surface mb-1">Tas Handmade Stylish</h3>
+  <p class="font-body-md text-label-sm text-on-surface-variant mb-4 line-clamp-1">
+  Desain macrame modern untuk gaya yang berani.
+  </p>
+  
+  <div class="mt-auto flex items-center justify-between">
+  <span class="font-headline-sm text-label-md text-primary">Rp 275.000</span>
+  
+  <button class="add-to-cart bg-primary text-on-primary p-2 rounded-lg hover:brightness-95 transition-all active:-translate-y-px"
+  data-name="Tas Handmade Stylish"
+  data-price="275000"
+  data-image="https://lh3.googleusercontent.com/aida-public/AB6AXuBqetCZA0qNkYnEgeHC_dteIOVbu5w5fPlMjyPr6qAQIaYHNgp35bpvBRPqz7k-_vUIHEdYNn3lw9RrUvO3TJqq-5iMJ4Wjms08NG4k1jICrI3OU3p1WToMRqcfll4oTG-ZaEFqMhFoJss4K-9vB5pd2_2tAmpy2kKKwCDxzH9mZDoiix6J-M_hhIbI4THQHA_JZD5LXr24yrkkhITBVX5oFQ_JH2-x7FKt8tkDTSVnQWn_dY937Au6Mf--P3oyBzVMev_Caig8kDnB">
+  <span class="material-symbols-outlined">add_shopping_cart</span>
+  </button>
+  
+  </div>
+  </div>
+  </article>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-slate-50 border-t border-slate-200 w-full py-16">
+<div class="max-w-[1280px] mx-auto px-8 flex flex-col md:flex-row justify-between items-center gap-8">
+<div class="flex flex-col gap-4 items-center md:items-start">
+<div class="text-lg font-bold text-slate-800">TokoKita</div>
+<p class="font-['Plus_Jakarta_Sans'] text-xs uppercase tracking-widest text-slate-500">© 2024 TokoKita. Crafted with intention.</p>
+</div>
+<nav class="flex gap-8 font-['Plus_Jakarta_Sans'] text-xs uppercase tracking-widest">
+  <li><a class="text-slate-500 dark:text-slate-500 hover:text-indigo-500 hover:translate-x-1 transition-transform inline-block" href="navigasi.html">Tentang Kami</a></li>
+  <li><a class="text-slate-500 dark:text-slate-500 hover:text-indigo-500 hover:translate-x-1 transition-transform inline-block" href="navigasi.html">Kebijakan Pengembalian</a></li>
+  <li><a class="text-slate-500 dark:text-slate-500 hover:text-indigo-500 hover:translate-x-1 transition-transform inline-block" href="navigasi.html">Panduan Ukuran</a></li>
+  <li><a class="text-slate-500 dark:text-slate-500 hover:text-indigo-500 hover:translate-x-1 transition-transform inline-block" href="navigasi.html">Hubungi Kami</a></li>
+</nav>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-slate-400 cursor-pointer hover:text-primary transition-colors" data-icon="language">language</span>
+<span class="material-symbols-outlined text-slate-400 cursor-pointer hover:text-primary transition-colors" data-icon="share">share</span>
+</div>
+</div>
+</footer>
+<script>
+// fungsi ambil keranjang dari localStorage
+function getCart() {
+  return JSON.parse(localStorage.getItem("cart")) || [];
+}
+
+// fungsi simpan ke localStorage
+function saveCart(cart) {
+  localStorage.setItem("cart", JSON.stringify(cart));
+}
+
+// fungsi tambah ke keranjang
+function addToCart(product) {
+  let cart = getCart();
+
+  // cek apakah produk sudah ada
+  let existing = cart.find(item => item.name === product.name);
+
+  if (existing) {
+    existing.qty += 1;
+  } else {
+    product.qty = 1;
+    cart.push(product);
+  }
+
+  saveCart(cart);
+
+  alert(product.name + " ditambahkan ke keranjang!");
+}
+</script>
+<script>
+  // ================= CART SYSTEM =================
+  function getCart() {
+    return JSON.parse(localStorage.getItem("cart")) || [];
+  }
+  
+  function saveCart(cart) {
+    localStorage.setItem("cart", JSON.stringify(cart));
+  }
+  
+  // ================= HANDLE CLICK =================
+  document.querySelectorAll(".add-to-cart").forEach(btn => {
+    btn.addEventListener("click", function () {
+      const product = {
+        name: this.dataset.name,
+        price: parseInt(this.dataset.price),
+        image: this.dataset.image,
+        qty: 1
+      };
+  
+      let cart = getCart();
+  
+      let existing = cart.find(item => item.name === product.name);
+  
+      if (existing) {
+        existing.qty += 1;
+      } else {
+        cart.push(product);
+      }
+  
+      saveCart(cart);
+  
+      alert(product.name + " ditambahkan ke keranjang!");
+    });
+  });
+  </script>
+</body></html>

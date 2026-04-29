@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+
+<html lang="id"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "outline-variant": "#c7c4d8",
+                    "surface-container": "#f0ecf9",
+                    "secondary-fixed-dim": "#4ae176",
+                    "surface-tint": "#4d44e3",
+                    "surface-dim": "#dcd8e5",
+                    "surface-container-highest": "#e4e1ee",
+                    "on-secondary-fixed-variant": "#005321",
+                    "on-primary-fixed": "#0f0069",
+                    "on-primary-container": "#dad7ff",
+                    "on-error-container": "#93000a",
+                    "on-tertiary-fixed": "#351000",
+                    "inverse-primary": "#c3c0ff",
+                    "on-tertiary": "#ffffff",
+                    "outline": "#777587",
+                    "on-error": "#ffffff",
+                    "inverse-surface": "#302f39",
+                    "surface-container-high": "#eae6f4",
+                    "tertiary-fixed": "#ffdbcc",
+                    "on-background": "#1b1b24",
+                    "background": "#fcf8ff",
+                    "tertiary-container": "#a44100",
+                    "tertiary-fixed-dim": "#ffb695",
+                    "secondary": "#006e2f",
+                    "error": "#ba1a1a",
+                    "on-primary": "#ffffff",
+                    "primary-container": "#4f46e5",
+                    "primary-fixed-dim": "#c3c0ff",
+                    "on-surface-variant": "#464555",
+                    "on-tertiary-container": "#ffd2be",
+                    "surface-variant": "#e4e1ee",
+                    "inverse-on-surface": "#f3effc",
+                    "on-primary-fixed-variant": "#3323cc",
+                    "primary": "#3525cd",
+                    "on-surface": "#1b1b24",
+                    "primary-fixed": "#e2dfff",
+                    "tertiary": "#7e3000",
+                    "secondary-container": "#6bff8f",
+                    "surface-container-low": "#f5f2ff",
+                    "surface": "#fcf8ff",
+                    "secondary-fixed": "#6bff8f",
+                    "on-secondary-container": "#007432",
+                    "on-secondary": "#ffffff",
+                    "surface-bright": "#fcf8ff",
+                    "surface-container-lowest": "#ffffff",
+                    "error-container": "#ffdad6",
+                    "on-secondary-fixed": "#002109",
+                    "on-tertiary-fixed-variant": "#7b2f00"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "xs": "8px",
+                    "xl": "64px",
+                    "md": "24px",
+                    "gutter": "24px",
+                    "base": "4px",
+                    "container-max": "1280px",
+                    "sm": "16px",
+                    "lg": "40px"
+            },
+            "fontFamily": {
+                    "headline-sm": ["Plus Jakarta Sans"],
+                    "label-md": ["Inter"],
+                    "label-sm": ["Inter"],
+                    "display-lg": ["Plus Jakarta Sans"],
+                    "body-lg": ["Inter"],
+                    "body-md": ["Inter"],
+                    "headline-md": ["Plus Jakarta Sans"]
+            },
+            "fontSize": {
+                    "headline-sm": ["24px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                    "label-md": ["14px", {"lineHeight": "1.4", "letterSpacing": "0.01em", "fontWeight": "500"}],
+                    "label-sm": ["12px", {"lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "display-lg": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "body-md": ["16px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                    "headline-md": ["32px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "600"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      body {
+        background-color: #F8FAFC;
+      }
+    </style>
+</head>
+<body class="flex flex-col min-h-screen">
+  <script>
+    if (localStorage.getItem("login") !== "true") {
+      alert("Kamu harus login dulu!");
+      window.location.href = "login.html";
+    }
+    </script>
+<!-- TopAppBar Shell -->
+<nav class="fixed top-0 w-full z-50 bg-white/90 dark:bg-slate-900/90 backdrop-blur-md border-b border-slate-100 dark:border-slate-800 shadow-[0_4px_20px_rgba(79,70,229,0.02)]">
+<div class="max-w-[1280px] mx-auto flex justify-between items-center px-8 h-20">
+<div class="text-2xl font-bold tracking-tighter text-indigo-600 dark:text-indigo-400">TokoKita</div>
+<div class="hidden md:flex gap-8 items-center">
+<a class="font-['Plus_Jakarta_Sans'] text-sm tracking-wide text-slate-600 dark:text-slate-400 hover:text-indigo-500 transition-colors" href="#">Beranda</a>
+<a class="font-['Plus_Jakarta_Sans'] text-sm tracking-wide text-slate-600 dark:text-slate-400 hover:text-indigo-500 transition-colors" href="#">Produk</a>
+<a class="font-['Plus_Jakarta_Sans'] text-sm tracking-wide text-slate-600 dark:text-slate-400 hover:text-indigo-500 transition-colors" href="#">Akun</a>
+</div>
+<div class="flex items-center gap-6">
+<button class="active:scale-95 transition-transform hover:opacity-80 transition-all duration-300 text-slate-600">
+<span class="material-symbols-outlined" data-icon="shopping_cart">shopping_cart</span>
+</button>
+<button class="active:scale-95 transition-transform hover:opacity-80 transition-all duration-300 text-slate-600">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+</button>
+</div>
+</div>
+</nav>
+<!-- Main Content -->
+<main class="flex-grow pt-32 pb-xl px-8 max-w-[1280px] mx-auto w-full">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-xl">
+<!-- Checkout Form Section -->
+<div class="lg:col-span-7 space-y-lg">
+<header>
+<h1 class="font-headline-md text-headline-md text-on-surface">Informasi Pengiriman</h1>
+<p class="font-body-md text-body-md text-on-surface-variant mt-2">Mohon lengkapi detail pengiriman Anda untuk menyelesaikan pesanan.</p>
+</header>
+<div class="bg-white p-lg rounded-xl shadow-[0_4px_20px_rgba(79,70,229,0.02)] border border-slate-100">
+<form class="space-y-md">
+<div class="space-y-xs">
+<label class="font-label-md text-label-md text-on-surface">Nama Lengkap</label>
+<input class="w-full bg-white border border-outline-variant rounded-lg px-4 py-3 focus:ring-2 focus:ring-primary-container focus:border-primary-container outline-none transition-all font-body-md" placeholder="Contoh: Budi Santoso" type="text"/>
+</div>
+<div class="space-y-xs">
+<label class="font-label-md text-label-md text-on-surface">Alamat Lengkap</label>
+<textarea class="w-full bg-white border border-outline-variant rounded-lg px-4 py-3 focus:ring-2 focus:ring-primary-container focus:border-primary-container outline-none transition-all font-body-md" placeholder="Jl. Mawar No. 123, Kelurahan, Kecamatan, Kota" rows="4"></textarea>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-md">
+<div class="space-y-xs">
+<label class="font-label-md text-label-md text-on-surface">Nomor Telepon</label>
+<input class="w-full bg-white border border-outline-variant rounded-lg px-4 py-3 focus:ring-2 focus:ring-primary-container focus:border-primary-container outline-none transition-all font-body-md" placeholder="0812xxxx" type="tel"/>
+</div>
+<div class="space-y-xs">
+<label class="font-label-md text-label-md text-on-surface">Kode Pos</label>
+<input class="w-full bg-white border border-outline-variant rounded-lg px-4 py-3 focus:ring-2 focus:ring-primary-container focus:border-primary-container outline-none transition-all font-body-md" placeholder="12345" type="text"/>
+</div>
+</div>
+</form>
+</div>
+<div class="bg-surface-container-low p-md rounded-xl border border-primary/10 flex items-start gap-4">
+<span class="material-symbols-outlined text-primary" data-icon="local_shipping">local_shipping</span>
+<div>
+<p class="font-label-md text-label-md text-on-surface">Pengiriman Standar</p>
+<p class="font-body-md text-body-md text-on-surface-variant">Estimasi tiba dalam 2-4 hari kerja. Pengiriman dijamin aman dengan kemasan berkualitas.</p>
+</div>
+</div>
+</div>
+<!-- Order Summary Section -->
+<!-- Order Summary Section -->
+<div class="lg:col-span-5">
+  <div class="sticky top-32 space-y-md">
+    <h2 class="font-headline-sm text-headline-sm text-on-surface">
+      Ringkasan Pesanan
+    </h2>
+
+    <div class="bg-white rounded-xl shadow-[0_12px_40px_rgba(79,70,229,0.06)] border border-slate-100 overflow-hidden">
+
+      <div class="p-md space-y-md">
+
+        <!-- ITEM LIST DYNAMIC -->
+        <div id="order-items" class="space-y-md"></div>
+
+        <!-- TOTAL -->
+        <div class="pt-md border-t border-slate-100 space-y-2">
+
+          <div class="flex justify-between">
+            <p class="font-body-md text-body-md text-on-surface-variant">Subtotal</p>
+            <p id="subtotal" class="font-body-md text-body-md text-on-surface">Rp 0</p>
+          </div>
+
+          <div class="flex justify-between">
+            <p class="font-body-md text-body-md text-on-surface-variant">Ongkos Kirim</p>
+            <p class="font-body-md text-body-md text-secondary">Gratis</p>
+          </div>
+
+          <div class="flex justify-between pt-2">
+            <p class="font-label-md text-lg text-on-surface font-semibold">Total</p>
+            <p id="total" class="font-label-md text-lg text-primary font-bold">Rp 0</p>
+          </div>
+
+        </div>
+      </div>
+
+      <button onclick="checkout()" class="w-full bg-primary-container text-on-primary py-4 rounded-lg font-label-md text-md shadow-lg shadow-indigo-200 active:scale-95 transition-transform hover:brightness-95 transition-all duration-300">
+        Complete Order
+      </button>
+
+        <p class="text-center font-label-sm text-label-sm text-on-surface-variant mt-4 flex items-center justify-center gap-1">
+          <span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">lock</span>
+          Pembayaran Aman & Terenkripsi
+        </p>
+      </div>
+
+    </div>
+  </div>
+</div>
+<p class="text-center font-label-sm text-label-sm text-on-surface-variant mt-4 flex items-center justify-center gap-1">
+<span class="material-symbols-outlined text-[16px]" data-icon="lock" style="font-variation-settings: 'FILL' 1;">lock</span>
+                                Pembayaran Aman &amp; Terenkripsi
+                            </p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer Shell -->
+<footer class="w-full mt-auto bg-slate-50 dark:bg-slate-950 border-t border-slate-200 dark:border-slate-800">
+<div class="max-w-[1280px] mx-auto px-8 py-16 grid grid-cols-1 md:grid-cols-4 gap-12">
+<div class="col-span-1 md:col-span-1">
+<span class="text-xl font-bold text-slate-900 dark:text-slate-100 mb-4 block">TokoKita</span>
+<p class="font-['Plus_Jakarta_Sans'] text-sm leading-relaxed text-slate-500">Curated high-quality handmade products for your daily lifestyle.</p>
+</div>
+<div>
+<h4 class="font-['Plus_Jakarta_Sans'] text-sm font-bold text-slate-900 mb-4">Layanan</h4>
+<div class="flex flex-col gap-3">
+<a class="font-['Plus_Jakarta_Sans'] text-sm text-slate-500 hover:text-indigo-500 hover:translate-x-1 transition-transform duration-200" href="navigasi.html">Kebijakan Pengembalian</a>
+<a class="font-['Plus_Jakarta_Sans'] text-sm text-slate-500 hover:text-indigo-500 hover:translate-x-1 transition-transform duration-200" href="navigasi.html">Panduan Ukuran</a>
+<a class="font-['Plus_Jakarta_Sans'] text-sm text-slate-500 hover:text-indigo-500 hover:translate-x-1 transition-transform duration-200" href="navigasi.html">Hubungi Kami</a>
+</div>
+</div>
+<div>
+<h4 class="font-['Plus_Jakarta_Sans'] text-sm font-bold text-slate-900 mb-4">Perusahaan</h4>
+<div class="flex flex-col gap-3">
+<a class="font-['Plus_Jakarta_Sans'] text-sm text-slate-500 hover:text-indigo-500 hover:translate-x-1 transition-transform duration-200" href="navigasi.html">Tentang Kami</a>
+
+</div>
+</div>
+<div>
+<h4 class="font-['Plus_Jakarta_Sans'] text-sm font-bold text-slate-900 mb-4">Ikuti Kami</h4>
+<div class="flex gap-4">
+<div class="w-10 h-10 rounded-full bg-slate-200 flex items-center justify-center text-slate-600 hover:bg-indigo-100 hover:text-indigo-600 cursor-pointer transition-colors">
+<span class="material-symbols-outlined text-lg" data-icon="share">share</span>
+</div>
+<div class="w-10 h-10 rounded-full bg-slate-200 flex items-center justify-center text-slate-600 hover:bg-indigo-100 hover:text-indigo-600 cursor-pointer transition-colors">
+<span class="material-symbols-outlined text-lg" data-icon="favorite">favorite</span>
+</div>
+</div>
+</div>
+</div>
+<div class="max-w-[1280px] mx-auto px-8 py-8 border-t border-slate-200/50">
+<p class="font-['Plus_Jakarta_Sans'] text-sm leading-relaxed text-slate-500 text-center">© 2024 TokoKita. Handmade with quality and care.</p>
+</div>
+</footer>
+<script>
+  let cart = JSON.parse(localStorage.getItem("cart")) || [];
+  
+  // render checkout
+  function renderCheckout() {
+    const container = document.getElementById("order-items");
+    const subtotalEl = document.getElementById("subtotal");
+    const totalEl = document.getElementById("total");
+  
+    container.innerHTML = "";
+  
+    let subtotal = 0;
+  
+    if (cart.length === 0) {
+      container.innerHTML = `
+        <p class="text-center text-slate-500">Keranjang masih kosong</p>
+      `;
+    }
+  
+    cart.forEach(item => {
+      const totalItem = item.price * item.qty;
+      subtotal += totalItem;
+  
+      container.innerHTML += `
+        <div class="flex gap-4 items-start">
+  
+          <div class="w-20 h-20 rounded-lg overflow-hidden bg-slate-100">
+            <img src="${item.image}" class="w-full h-full object-cover"/>
+          </div>
+  
+          <div class="flex-grow">
+            <p class="font-label-md text-on-surface">${item.name}</p>
+            <p class="text-sm text-slate-500">Varian: ${item.variant || '-'}</p>
+            <p class="text-sm mt-1">
+              ${item.qty} x Rp ${item.price.toLocaleString("id-ID")}
+            </p>
+          </div>
+  
+        </div>
+      `;
+    });
+  
+    subtotalEl.innerText = "Rp " + subtotal.toLocaleString("id-ID");
+    totalEl.innerText = "Rp " + subtotal.toLocaleString("id-ID");
+  }
+  
+  // checkout function
+  function checkout() {
+  if (cart.length === 0) {
+    alert("Keranjang masih kosong!");
+    return;
+  }
+
+  // simpan data sebelum pindah halaman
+  localStorage.setItem("checkoutData", JSON.stringify(cart));
+
+  // pindah ke halaman pembayaran
+  window.location.href = "pembayaran.html";
+}
+  
+  window.onload = renderCheckout;
+  </script>
+</body></html>

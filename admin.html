@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+
+<html lang="id"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>TokoKita Admin Dashboard</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "outline-variant": "#c7c4d8",
+                        "surface-container": "#f0ecf9",
+                        "secondary-fixed-dim": "#4ae176",
+                        "surface-tint": "#4d44e3",
+                        "surface-dim": "#dcd8e5",
+                        "surface-container-highest": "#e4e1ee",
+                        "on-secondary-fixed-variant": "#005321",
+                        "on-primary-fixed": "#0f0069",
+                        "on-primary-container": "#dad7ff",
+                        "on-error-container": "#93000a",
+                        "on-tertiary-fixed": "#351000",
+                        "inverse-primary": "#c3c0ff",
+                        "on-tertiary": "#ffffff",
+                        "outline": "#777587",
+                        "on-error": "#ffffff",
+                        "inverse-surface": "#302f39",
+                        "surface-container-high": "#eae6f4",
+                        "tertiary-fixed": "#ffdbcc",
+                        "on-background": "#1b1b24",
+                        "background": "#fcf8ff",
+                        "tertiary-container": "#a44100",
+                        "tertiary-fixed-dim": "#ffb695",
+                        "secondary": "#006e2f",
+                        "error": "#ba1a1a",
+                        "on-primary": "#ffffff",
+                        "primary-container": "#4f46e5",
+                        "primary-fixed-dim": "#c3c0ff",
+                        "on-surface-variant": "#464555",
+                        "on-tertiary-container": "#ffd2be",
+                        "surface-variant": "#e4e1ee",
+                        "inverse-on-surface": "#f3effc",
+                        "on-primary-fixed-variant": "#3323cc",
+                        "primary": "#3525cd",
+                        "on-surface": "#1b1b24",
+                        "primary-fixed": "#e2dfff",
+                        "tertiary": "#7e3000",
+                        "secondary-container": "#6bff8f",
+                        "surface-container-low": "#f5f2ff",
+                        "surface": "#fcf8ff",
+                        "secondary-fixed": "#6bff8f",
+                        "on-secondary-container": "#007432",
+                        "on-secondary": "#ffffff",
+                        "surface-bright": "#fcf8ff",
+                        "surface-container-lowest": "#ffffff",
+                        "error-container": "#ffdad6",
+                        "on-secondary-fixed": "#002109",
+                        "on-tertiary-fixed-variant": "#7b2f00"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "xs": "8px",
+                        "xl": "64px",
+                        "md": "24px",
+                        "gutter": "24px",
+                        "base": "4px",
+                        "container-max": "1280px",
+                        "sm": "16px",
+                        "lg": "40px"
+                    },
+                    "fontFamily": {
+                        "headline-sm": ["Plus Jakarta Sans"],
+                        "label-md": ["Inter"],
+                        "label-sm": ["Inter"],
+                        "display-lg": ["Plus Jakarta Sans"],
+                        "body-lg": ["Inter"],
+                        "body-md": ["Inter"],
+                        "headline-md": ["Plus Jakarta Sans"]
+                    },
+                    "fontSize": {
+                        "headline-sm": ["24px", { "lineHeight": "1.3", "fontWeight": "600" }],
+                        "label-md": ["14px", { "lineHeight": "1.4", "letterSpacing": "0.01em", "fontWeight": "500" }],
+                        "label-sm": ["12px", { "lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "600" }],
+                        "display-lg": ["48px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "body-md": ["16px", { "lineHeight": "1.5", "fontWeight": "400" }],
+                        "headline-md": ["32px", { "lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "600" }]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        body {
+            background-color: #fcf8ff;
+            color: #1b1b24;
+        }
+    </style>
+</head>
+<body class="font-body-md text-body-md antialiased min-h-screen flex flex-col">
+<!-- TopNavBar -->
+<nav class="bg-white/90 backdrop-blur-md fixed top-0 w-full z-50 border-b border-slate-100 shadow-[0_4px_20px_rgba(79,70,229,0.02)]">
+<div class="max-w-[1280px] mx-auto flex justify-between items-center px-8 h-20">
+<div class="flex items-center gap-12">
+<span class="text-2xl font-bold tracking-tighter text-indigo-600">TokoKita</span>
+<div class="hidden md:flex gap-8 font-['Plus_Jakarta_Sans'] text-sm tracking-wide">
+<a class="text-slate-600 hover:text-indigo-500 transition-colors" href="#">Beranda</a>
+<a class="text-indigo-600 font-semibold border-b-2 border-indigo-600 pb-1" href="#">Produk</a>
+<a class="text-slate-600 hover:text-indigo-500 transition-colors" href="#">Keranjang</a>
+<a class="text-slate-600 hover:text-indigo-500 transition-colors" href="#">Akun</a>
+</div>
+</div>
+<div class="flex items-center gap-6">
+<div class="relative group">
+<span class="material-symbols-outlined text-slate-600 group-hover:text-indigo-600 transition-all" data-icon="search">search</span>
+</div>
+<div class="flex gap-4">
+<button class="active:scale-95 transition-transform">
+<span class="material-symbols-outlined text-slate-600 hover:opacity-80 transition-all duration-300" data-icon="shopping_cart">shopping_cart</span>
+</button>
+<button class="active:scale-95 transition-transform">
+<span class="material-symbols-outlined text-slate-600 hover:opacity-80 transition-all duration-300" data-icon="person">person</span>
+</button>
+</div>
+</div>
+</div>
+</nav>
+<div class="flex pt-20 min-h-screen max-w-[1280px] mx-auto w-full">
+<!-- Sidebar Navigation -->
+<aside class="w-64 border-r border-slate-100 hidden md:block pt-8 px-6">
+<div class="space-y-6">
+<div>
+<h3 class="font-label-sm text-label-sm text-slate-400 uppercase tracking-widest mb-4">Dashboard</h3>
+<nav class="space-y-1">
+<a class="flex items-center gap-3 px-4 py-3 bg-primary-container text-white rounded-xl shadow-sm" href="#">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+<span class="font-label-md text-label-md">Overview</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-600 hover:bg-surface-container rounded-xl transition-all group" href="#">
+<span class="material-symbols-outlined group-hover:text-primary" data-icon="receipt_long">receipt_long</span>
+<span class="font-label-md text-label-md">All Orders</span>
+</a>
+</nav>
+</div>
+<div>
+<h3 class="font-label-sm text-label-sm text-slate-400 uppercase tracking-widest mb-4">Management</h3>
+<nav class="space-y-1">
+<a class="flex items-center gap-3 px-4 py-3 text-slate-600 hover:bg-surface-container rounded-xl transition-all group" href="#">
+<span class="material-symbols-outlined group-hover:text-primary" data-icon="inventory_2">inventory_2</span>
+<span class="font-label-md text-label-md">Product Management</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-600 hover:bg-surface-container rounded-xl transition-all group" href="#">
+<span class="material-symbols-outlined group-hover:text-primary" data-icon="analytics">analytics</span>
+<span class="font-label-md text-label-md">Sales Reports</span>
+</a>
+</nav>
+</div>
+<div>
+<h3 class="font-label-sm text-label-sm text-slate-400 uppercase tracking-widest mb-4">System</h3>
+<nav class="space-y-1">
+<a class="flex items-center gap-3 px-4 py-3 text-slate-600 hover:bg-surface-container rounded-xl transition-all group" href="#">
+<span class="material-symbols-outlined group-hover:text-primary" data-icon="settings">settings</span>
+<span class="font-label-md text-label-md">Settings</span>
+</a>
+</nav>
+</div>
+</div>
+</aside>
+<!-- Main Content -->
+<main class="flex-1 px-8 py-10 bg-surface">
+<!-- Header Section -->
+<div class="flex justify-between items-end mb-12">
+<div>
+<h1 class="font-display-lg text-display-lg text-on-surface mb-2">Admin Dashboard</h1>
+<p class="font-body-lg text-slate-500">Welcome back! Here's what's happening with your store today.</p>
+</div>
+<button class="bg-primary text-white px-6 py-3 rounded-xl font-label-md flex items-center gap-2 hover:bg-primary-container shadow-md transition-all active:scale-95">
+<span class="material-symbols-outlined" data-icon="download">download</span>
+                    Export Report
+                </button>
+</div>
+<!-- Stats Grid -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter mb-12">
+<div class="bg-white p-8 rounded-xl shadow-[0_4px_20px_rgba(79,70,229,0.02)] border border-slate-50 flex flex-col justify-between">
+<div class="flex justify-between items-start mb-6">
+<div class="bg-primary-container/10 p-3 rounded-lg">
+<span class="material-symbols-outlined text-primary" data-icon="payments">payments</span>
+</div>
+<span class="text-secondary font-label-sm bg-secondary-container/20 px-2 py-1 rounded-full">+12.5%</span>
+</div>
+<div>
+<p class="font-label-md text-slate-500 mb-1">Total Sales</p>
+<h2 class="font-headline-md text-headline-md">Rp 128.450.000</h2>
+</div>
+</div>
+<div class="bg-white p-8 rounded-xl shadow-[0_4px_20px_rgba(79,70,229,0.02)] border border-slate-50 flex flex-col justify-between">
+<div class="flex justify-between items-start mb-6">
+<div class="bg-tertiary-container/10 p-3 rounded-lg">
+<span class="material-symbols-outlined text-tertiary" data-icon="shopping_basket">shopping_basket</span>
+</div>
+<span class="text-secondary font-label-sm bg-secondary-container/20 px-2 py-1 rounded-full">+4 new</span>
+</div>
+<div>
+<p class="font-label-md text-slate-500 mb-1">Active Orders</p>
+<h2 class="font-headline-md text-headline-md">42 Orders</h2>
+</div>
+</div>
+<div class="bg-white p-8 rounded-xl shadow-[0_4px_20px_rgba(79,70,229,0.02)] border border-slate-50 flex flex-col justify-between">
+<div class="flex justify-between items-start mb-6">
+<div class="bg-indigo-50 p-3 rounded-lg">
+<span class="material-symbols-outlined text-indigo-600" data-icon="group">group</span>
+</div>
+</div>
+<div>
+<p class="font-label-md text-slate-500 mb-1">Total Customers</p>
+<h2 class="font-headline-md text-headline-md">1,248</h2>
+</div>
+</div>
+</div>
+<!-- Orders Table Section -->
+<div class="bg-white rounded-xl shadow-[0_4px_20px_rgba(79,70,229,0.02)] border border-slate-50 overflow-hidden">
+<div class="px-8 py-6 border-b border-slate-100 flex justify-between items-center">
+<h3 class="font-headline-sm text-headline-sm">All Orders</h3>
+<div class="flex gap-4">
+<div class="relative">
+<input class="pl-10 pr-4 py-2 bg-slate-50 border-slate-200 rounded-lg text-label-md focus:ring-primary focus:border-primary" placeholder="Search orders..." type="text"/>
+<span class="material-symbols-outlined absolute left-3 top-2.5 text-slate-400 text-sm" data-icon="search">search</span>
+</div>
+<button class="bg-slate-50 p-2 rounded-lg text-slate-600 hover:bg-slate-100 transition-colors">
+<span class="material-symbols-outlined" data-icon="filter_list">filter_list</span>
+</button>
+</div>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left">
+<thead>
+<tr class="bg-slate-50/50">
+<th class="px-8 py-4 font-label-sm text-slate-500 uppercase tracking-wider">Order ID</th>
+<th class="px-8 py-4 font-label-sm text-slate-500 uppercase tracking-wider">Customer</th>
+<th class="px-8 py-4 font-label-sm text-slate-500 uppercase tracking-wider">Product</th>
+<th class="px-8 py-4 font-label-sm text-slate-500 uppercase tracking-wider">Amount</th>
+<th class="px-8 py-4 font-label-sm text-slate-500 uppercase tracking-wider">Status</th>
+<th class="px-8 py-4 font-label-sm text-slate-500 uppercase tracking-wider">Action</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-slate-50">
+<!-- Row 1: Paid -->
+<tr class="hover:bg-slate-50/50 transition-colors">
+<td class="px-8 py-5 font-label-md text-indigo-600">#TK-8821</td>
+<td class="px-8 py-5">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-slate-200 overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="profile portrait of a male customer with neutral background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC6wgWCFWs50IRWAtizSA9pDNS3axxZb5iAsDG3kLvbgeRfvHyV8uh1gHsuAWgE0DtWVPxWU7xC7HdKuynrA-fh_dpgwtw7SoR0pXjjgf28mupsTRasLD03M5ohRRzu_Vujev55b9X5RJ3E9raummVPOdAYn3gTg92tlPiYSzdFStnr0EvpJEqKEvqXnqIAsxNfYcwPBZn5xvgjcWWF8wuTbSemUj60zQ-3pKZS-B33Jd2j63f0aAhIhY1TIvHtaxlYxkOdXo_0jSbU"/>
+</div>
+<span class="font-label-md">Budi Santoso</span>
+</div>
+</td>
+<td class="px-8 py-5 text-slate-600">Handmade Leather Wallet</td>
+<td class="px-8 py-5 font-semibold">Rp 350.000</td>
+<td class="px-8 py-5">
+<span class="px-3 py-1 bg-secondary-container/20 text-on-secondary-container rounded-full text-label-sm">Paid</span>
+</td>
+<td class="px-8 py-5">
+<button class="text-slate-400 hover:text-primary transition-colors">
+<span class="material-symbols-outlined" data-icon="more_horiz">more_horiz</span>
+</button>
+</td>
+</tr>
+<!-- Row 2: Shipped -->
+<tr class="hover:bg-slate-50/50 transition-colors">
+<td class="px-8 py-5 font-label-md text-indigo-600">#TK-8820</td>
+<td class="px-8 py-5">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-slate-200 overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="professional woman smiling portrait for profile avatar" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCg0A9ZiVJYf8GpYBYx5HXzKvppmx0wYV8JSU5Ki9zs_CF86CJtf7oHO4HR9UHFPNjUhqgkHddNEpgiWvkEWNTq_MK3m_8PJkPoGVQqxHnAPm-M-wu1ou_NzmQJnYxJdiiGgVQ-h-bO-vMLlXU6Z4vbiCtdFJ_CC7M5L6SY0kTFmMxc8EIPWTvE28cpp5zVmwh4abSY6m4iRxYEBVkWkFMWiWraddsUMYkl0xCzkgqKqaYZwfD5V5pohC_XF7T1hT0BoXfR1bWrIwzo"/>
+</div>
+<span class="font-label-md">Siti Rahma</span>
+</div>
+</td>
+<td class="px-8 py-5 text-slate-600">Ceramic Teapot Set</td>
+<td class="px-8 py-5 font-semibold">Rp 850.000</td>
+<td class="px-8 py-5">
+<span class="px-3 py-1 bg-primary-container/10 text-primary rounded-full text-label-sm">Shipped</span>
+</td>
+<td class="px-8 py-5">
+<button class="text-slate-400 hover:text-primary transition-colors">
+<span class="material-symbols-outlined" data-icon="more_horiz">more_horiz</span>
+</button>
+</td>
+</tr>
+<!-- Row 3: Pending -->
+<tr class="hover:bg-slate-50/50 transition-colors">
+<td class="px-8 py-5 font-label-md text-indigo-600">#TK-8819</td>
+<td class="px-8 py-5">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-slate-200 overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="young male portrait with casual look for customer profile" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAlsmJp43NgtCSwMCbTJCx5aEBkTZdOIV74a3GfEl65tDl-z_x_EKHKmKuYcjIABQn8kci8gqV9ztwBch28eVKJ_rYmB_T5HkKqImFSyp-HBMzNBnJeM4FtW2V1_4Dsqt7Fa0xUCU3ITrWkDvN2gzRXsgsUdR8nYmvu6cnNseNj0vP244F8q18fovstcJv7Z1uNe-lxq4BCcm2Uwz3_gv1UBN_X90B5EtRdP7l8ReyA-HJJabU7GFDh8pSpXa2gKLj4zdAt2ixMQM6V"/>
+</div>
+<span class="font-label-md">Andi Wijaya</span>
+</div>
+</td>
+<td class="px-8 py-5 text-slate-600">Bamboo Woven Basket</td>
+<td class="px-8 py-5 font-semibold">Rp 225.000</td>
+<td class="px-8 py-5">
+<span class="px-3 py-1 bg-tertiary-fixed text-on-tertiary-fixed-variant rounded-full text-label-sm">Pending</span>
+</td>
+<td class="px-8 py-5">
+<button class="text-slate-400 hover:text-primary transition-colors">
+<span class="material-symbols-outlined" data-icon="more_horiz">more_horiz</span>
+</button>
+</td>
+</tr>
+<!-- Row 4: Paid -->
+<tr class="hover:bg-slate-50/50 transition-colors">
+<td class="px-8 py-5 font-label-md text-indigo-600">#TK-8818</td>
+<td class="px-8 py-5">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-slate-200 overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="mature male portrait with friendly expression for profile" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAUEtvznKyOxefuDRsjh8Np1m1UBHdhUbCnViM8ASUOPdyfDgFPvfjek9xYrOskZKbVn0gAzbh5g7rGHaOI6e9fbQ0Wav5wUMmttDvHo8KO13Sr6PZhop_IxIl30tFDB_l1SB2Jw9FjZeGsfSMh-73WYrYe8eZDpkrnagun89sqeOX-STnqQb2IESd_TBNj5JVr57THxa0UXIlGQNJOvT6bPHxNj95zJ4RTHH7omAe2UH78IBTOPkHEO200XxOZQFyNOJX7ZFvuYuhn"/>
+</div>
+<span class="font-label-md">Joko Susilo</span>
+</div>
+</td>
+<td class="px-8 py-5 text-slate-600">Eco-Friendly Totebag</td>
+<td class="px-8 py-5 font-semibold">Rp 120.000</td>
+<td class="px-8 py-5">
+<span class="px-3 py-1 bg-secondary-container/20 text-on-secondary-container rounded-full text-label-sm">Paid</span>
+</td>
+<td class="px-8 py-5">
+<button class="text-slate-400 hover:text-primary transition-colors">
+<span class="material-symbols-outlined" data-icon="more_horiz">more_horiz</span>
+</button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="px-8 py-4 bg-slate-50/50 border-t border-slate-100 flex items-center justify-between">
+<span class="font-label-sm text-slate-500">Showing 4 of 42 orders</span>
+<div class="flex gap-2">
+<button class="p-2 border border-slate-200 rounded hover:bg-white transition-colors disabled:opacity-50" disabled="">
+<span class="material-symbols-outlined text-sm" data-icon="chevron_left">chevron_left</span>
+</button>
+<button class="p-2 border border-slate-200 rounded hover:bg-white transition-colors">
+<span class="material-symbols-outlined text-sm" data-icon="chevron_right">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+</main>
+</div>
+<!-- Footer -->
+<footer class="bg-slate-50 w-full mt-auto border-t border-slate-200">
+<div class="max-w-[1280px] mx-auto px-8 py-16 grid grid-cols-1 md:grid-cols-4 gap-12">
+<div class="col-span-1 md:col-span-1">
+<span class="text-xl font-bold text-slate-900 mb-4 block">TokoKita</span>
+<p class="font-['Plus_Jakarta_Sans'] text-sm leading-relaxed text-slate-500">
+                    Handmade with quality and care. Supporting local artisans since 2024.
+                </p>
+</div>
+<div>
+<h4 class="font-label-md text-slate-900 mb-6">Navigasi</h4>
+<ul class="space-y-4">
+<li><a class="font-['Plus_Jakarta_Sans'] text-sm text-slate-500 hover:text-indigo-500 hover:translate-x-1 transition-transform duration-200 block" href="#">Tentang Kami</a></li>
+<li><a class="font-['Plus_Jakarta_Sans'] text-sm text-slate-500 hover:text-indigo-500 hover:translate-x-1 transition-transform duration-200 block" href="#">Hubungi Kami</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-md text-slate-900 mb-6">Bantuan</h4>
+<ul class="space-y-4">
+<li><a class="font-['Plus_Jakarta_Sans'] text-sm text-slate-500 hover:text-indigo-500 hover:translate-x-1 transition-transform duration-200 block" href="#">Kebijakan Pengembalian</a></li>
+<li><a class="font-['Plus_Jakarta_Sans'] text-sm text-slate-500 hover:text-indigo-500 hover:translate-x-1 transition-transform duration-200 block" href="#">Panduan Ukuran</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-md text-slate-900 mb-6">Copyright</h4>
+<p class="font-['Plus_Jakarta_Sans'] text-sm leading-relaxed text-slate-500">
+                    © 2024 TokoKita. Handmade with quality and care.
+                </p>
+</div>
+</div>
+</footer>
+</body></html>

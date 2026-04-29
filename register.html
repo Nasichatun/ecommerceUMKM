@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<title>Register - TokoKita</title>
+<script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="flex items-center justify-center h-screen bg-gray-100">
+
+<div class="bg-white p-8 rounded-xl shadow w-80">
+  <h2 class="text-xl font-bold mb-4">Register</h2>
+
+  <input id="name" class="w-full border p-2 mb-2" placeholder="Nama">
+  <input id="email" class="w-full border p-2 mb-2" placeholder="Email">
+  <input id="password" type="password" class="w-full border p-2 mb-4" placeholder="Password">
+
+  <button onclick="register()" class="w-full bg-indigo-600 text-white p-2 rounded">
+    Daftar
+  </button>
+
+  <p class="text-sm mt-3 text-center">
+    Sudah punya akun? <a href="login.html" class="text-indigo-600">Login</a>
+  </p>
+</div>
+
+<script>
+function register() {
+  let name = document.getElementById("name").value;
+  let email = document.getElementById("email").value;
+  let password = document.getElementById("password").value;
+
+  if(!name || !email || !password) {
+    alert("Semua harus diisi!");
+    return;
+  }
+
+  let users = JSON.parse(localStorage.getItem("users")) || [];
+
+  // cek email sudah ada
+  let exist = users.find(u => u.email === email);
+  if(exist) {
+    alert("Email sudah terdaftar!");
+    return;
+  }
+
+  users.push({
+    name,
+    email,
+    password,
+    role: "user"
+  });
+
+  localStorage.setItem("users", JSON.stringify(users));
+
+  alert("Register berhasil!");
+  window.location.href = "login.html";
+}
+</script>
+
+</body>
+</html>

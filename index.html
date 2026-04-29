@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+
+<html class="light" lang="id"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>TokoKita | Handmade Accessories</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "outline-variant": "#c7c4d8",
+                    "surface-container": "#f0ecf9",
+                    "secondary-fixed-dim": "#4ae176",
+                    "surface-tint": "#4d44e3",
+                    "surface-dim": "#dcd8e5",
+                    "surface-container-highest": "#e4e1ee",
+                    "on-secondary-fixed-variant": "#005321",
+                    "on-primary-fixed": "#0f0069",
+                    "on-primary-container": "#dad7ff",
+                    "on-error-container": "#93000a",
+                    "on-tertiary-fixed": "#351000",
+                    "inverse-primary": "#c3c0ff",
+                    "on-tertiary": "#ffffff",
+                    "outline": "#777587",
+                    "on-error": "#ffffff",
+                    "inverse-surface": "#302f39",
+                    "surface-container-high": "#eae6f4",
+                    "tertiary-fixed": "#ffdbcc",
+                    "on-background": "#1b1b24",
+                    "background": "#fcf8ff",
+                    "tertiary-container": "#a44100",
+                    "tertiary-fixed-dim": "#ffb695",
+                    "secondary": "#006e2f",
+                    "error": "#ba1a1a",
+                    "on-primary": "#ffffff",
+                    "primary-container": "#4f46e5",
+                    "primary-fixed-dim": "#c3c0ff",
+                    "on-surface-variant": "#464555",
+                    "on-tertiary-container": "#ffd2be",
+                    "surface-variant": "#e4e1ee",
+                    "inverse-on-surface": "#f3effc",
+                    "on-primary-fixed-variant": "#3323cc",
+                    "primary": "#3525cd",
+                    "on-surface": "#1b1b24",
+                    "primary-fixed": "#e2dfff",
+                    "tertiary": "#7e3000",
+                    "secondary-container": "#6bff8f",
+                    "surface-container-low": "#f5f2ff",
+                    "surface": "#fcf8ff",
+                    "secondary-fixed": "#6bff8f",
+                    "on-secondary-container": "#007432",
+                    "on-secondary": "#ffffff",
+                    "surface-bright": "#fcf8ff",
+                    "surface-container-lowest": "#ffffff",
+                    "error-container": "#ffdad6",
+                    "on-secondary-fixed": "#002109",
+                    "on-tertiary-fixed-variant": "#7b2f00"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "xs": "8px",
+                    "xl": "64px",
+                    "md": "24px",
+                    "gutter": "24px",
+                    "base": "4px",
+                    "container-max": "1280px",
+                    "sm": "16px",
+                    "lg": "40px"
+            },
+            "fontFamily": {
+                    "headline-sm": ["Plus Jakarta Sans"],
+                    "label-md": ["Inter"],
+                    "label-sm": ["Inter"],
+                    "display-lg": ["Plus Jakarta Sans"],
+                    "body-lg": ["Inter"],
+                    "body-md": ["Inter"],
+                    "headline-md": ["Plus Jakarta Sans"]
+            },
+            "fontSize": {
+                    "headline-sm": ["24px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                    "label-md": ["14px", {"lineHeight": "1.4", "letterSpacing": "0.01em", "fontWeight": "500"}],
+                    "label-sm": ["12px", {"lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "display-lg": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "body-md": ["16px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                    "headline-md": ["32px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "600"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md selection:bg-primary-fixed selection:text-on-primary-fixed">
+<nav class="fixed top-0 w-full z-50 bg-white/90 dark:bg-slate-900/90 backdrop-blur-md border-b border-slate-100 dark:border-slate-800 shadow-[0_4px_20px_rgba(79,70,229,0.02)]">
+<div class="max-w-[1280px] mx-auto flex justify-between items-center px-8 h-20">
+<div class="text-2xl font-bold tracking-tighter text-indigo-600 dark:text-indigo-400">TokoKita</div>
+<div class="hidden md:flex items-center gap-8 font-['Plus_Jakarta_Sans'] text-sm tracking-wide">
+<a class="text-indigo-600 dark:text-indigo-400 font-semibold border-b-2 border-indigo-600 pb-1" href="index.html">Beranda</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-indigo-500 transition-colors" href="produk.html">Produk</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-indigo-500 transition-colors" href="">Akun</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="p-2 text-slate-600 dark:text-slate-400 hover:opacity-80 transition-all duration-300 active:scale-95">
+        <a href="keranjang.html" class="cart-icon">
+                <span class="material-symbols-outlined">shopping_cart</span>
+              </a>
+</button>
+<button class="p-2 text-slate-600 dark:text-slate-400 hover:opacity-80 transition-all duration-300 active:scale-95">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+</button>
+</div>
+</div>
+</nav>
+<main>
+<section class="relative h-[870px] flex items-center pt-20 overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover" data-alt="Close-up of elegant handmade beaded necklaces and bracelets on a soft neutral linen cloth with warm morning sunlight" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCta7ojjDIkbuKcExhiQB7fXprf4nyzEv3CaZYMTYK73nlBU1NmMm0bXmtJbzQR5XCV1mYV8HrqMVvNre9Rf0crJfvFBpObDq1jPow4JPY-zb8boKQGbxurWipCevqXLr8rdo52TSkOUc-p_1Guwv1MJi1ne6ASn6-ZhvPMs12Wl_4JNJx7JORf08VwOYaZHGGX7URQviSiFptS4xo60neVP1NffUaKeppzvC24ZY4G2zWWpy1v-opW3j4XEbnxGMc2CDQGsvoW2aUi"/>
+<div class="absolute inset-0 bg-gradient-to-r from-background/90 via-background/40 to-transparent"></div>
+</div>
+<div class="container max-w-[1280px] mx-auto px-8 relative z-10">
+<div class="max-w-2xl">
+<span class="font-label-sm text-label-sm text-primary mb-sm block uppercase tracking-widest">Digital Boutique</span>
+<h1 class="font-display-lg text-display-lg text-on-background mb-md">Keindahan dalam Setiap Detail Buatan Tangan</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-lg max-w-lg">
+                        Koleksi aksesori eksklusif yang dirancang dengan ketelitian tinggi untuk menyempurnakan gaya personal Anda.
+                    </p>
+<div class="flex items-center gap-md">
+        <div class="flex gap-3">
+                <a href="produk.html#koleksi"
+                   class="bg-primary text-white px-6 py-3 rounded-lg font-semibold hover:opacity-90">
+                   Shop Now
+                </a>
+
+              </div>
+</div>
+</div>
+</div>
+</section>
+<section class="py-xl max-w-[1280px] mx-auto px-8">
+<div class="flex flex-col md:flex-row justify-between items-end mb-lg gap-sm">
+<div>
+<h2 class="font-headline-md text-headline-md text-on-background mb-base">Koleksi Pilihan</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Produk terlaris yang paling dicintai pelanggan kami.</p>
+</div>
+<div class="flex gap-xs">
+<span class="px-sm py-xs bg-surface-container rounded-full text-primary font-label-md text-label-md">Semua</span>
+<span class="px-sm py-xs hover:bg-surface-container transition-colors rounded-full text-on-surface-variant font-label-md text-label-md cursor-pointer">Gelang</span>
+<span class="px-sm py-xs hover:bg-surface-container transition-colors rounded-full text-on-surface-variant font-label-md text-label-md cursor-pointer">Kalung</span>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter">
+<div class="bg-white rounded-xl shadow-[0_4px_20px_rgba(79,70,229,0.02)] p-sm border border-slate-50 hover:shadow-[0_12px_32px_rgba(79,70,229,0.06)] transition-all group">
+<div class="aspect-square rounded-lg overflow-hidden mb-sm relative">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Detailed shot of a delicate handmade beaded bracelet with golden accents on a minimalist white pedestal" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCxXyo1d5VWgqaEkskDOXsyMWIg16jwAK35FhhldSKCKn9-alq01pF5HPaPYyfga_MXJ9dicRFGSquvkF6dFDuRGvqs8o5avEs1pirdmQ1FBUBtWiHrHzko0iA1tl1cVxAwo-jNBKCnO-gx-eqEki1us7GiIw2YZixoMudOVbH-cX8CuhxRD5aaIzQk2WdRyCWSzjfiG7e4_HTyP0zJmYxbInV6iWmJKrNUUPz2hGbNgiNaQLjEJnlSaFCv9Wb2aLfcpXbLX4EYkWSB"/>
+<div class="absolute top-xs right-xs">
+<button class="bg-white/80 backdrop-blur-md p-2 rounded-full text-primary shadow-sm hover:bg-white transition-colors">
+<span class="material-symbols-outlined text-[20px]" data-icon="favorite">favorite</span>
+</button>
+</div>
+</div>
+<div class="px-xs">
+<span class="font-label-sm text-[10px] text-secondary uppercase tracking-wider">Terlaris</span>
+<h3 class="font-headline-sm text-[18px] text-on-background mt-1">Gelang handmade</h3>
+<p class="font-body-md text-primary font-semibold mt-xs">Rp 125.000</p>
+</div>
+</div>
+<div class="bg-white rounded-xl shadow-[0_4px_20px_rgba(79,70,229,0.02)] p-sm border border-slate-50 hover:shadow-[0_12px_32px_rgba(79,70,229,0.06)] transition-all group">
+<div class="aspect-square rounded-lg overflow-hidden mb-sm relative">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Elegant aesthetic necklace with a pearl pendant resting on a beige textured background, studio lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDRQzS_qTyWBx4QXNiaMDIzHvNdKloiS_FERwR7hWvzjVOQizkXEykaV7mdnJI5wb1dY8C895iU8OoDtm3ybpzCkYVGvrh1j1N-2gIoiisn40GUsdRhQ2yO_7tDPh6dfoNWp0DHlEBXPLAg52_SZYOop7kerTVTlKxnF4kg4Kv-nXbHP95XxoPw_MjRXCCp5qEwS6j8Ojr6Tj3UZcdSamEQauY2B7sAbwzACDi7PmGzp4fk8J5x7S2XW7dg5dNCfznNlh71JJq05ABb"/>
+<div class="absolute top-xs right-xs">
+<button class="bg-white/80 backdrop-blur-md p-2 rounded-full text-primary shadow-sm hover:bg-white transition-colors">
+<span class="material-symbols-outlined text-[20px]" data-icon="favorite">favorite</span>
+</button>
+</div>
+</div>
+<div class="px-xs">
+<span class="font-label-sm text-[10px] text-primary uppercase tracking-wider">Baru</span>
+<h3 class="font-headline-sm text-[18px] text-on-background mt-1">Kalung estetik</h3>
+<p class="font-body-md text-primary font-semibold mt-xs">Rp 189.000</p>
+</div>
+</div>
+<div class="bg-white rounded-xl shadow-[0_4px_20px_rgba(79,70,229,0.02)] p-sm border border-slate-50 hover:shadow-[0_12px_32px_rgba(79,70,229,0.06)] transition-all group">
+<div class="aspect-square rounded-lg overflow-hidden mb-sm relative">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Set of colorful hand-braided friendship bracelets on a weathered wooden table with natural lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD--J48TFaTCOKJvE7hhg8KZ-Lm4fXdwSy6Q5O27OeYNBnhDT6cy_ydu_GJWzyr10Kee5-MoCA87CRfHiDJRrdw6Wx1lO8S-YmuZvJA4Q3Z5HGsWW5Hl-aZiNgpsP4ocjExdyhFZKI3UOvrDWnobh0FTnLHxKi41Ok5lVgKWuvbOt0Ycdat5iLq7kHfQk9cswAiJCsUEjW9yot43lpGQL9jIWueqdumWY0GFnZP4H8bfKQs4y5mkGsoSaFbxc6Rvq-NzYUylaTNf-aH"/>
+</div>
+<div class="px-xs">
+<span class="font-label-sm text-[10px] text-on-surface-variant uppercase tracking-wider">Ready Stock</span>
+<h3 class="font-headline-sm text-[18px] text-on-background mt-1">Gelang Jalinan</h3>
+<p class="font-body-md text-primary font-semibold mt-xs">Rp 85.000</p>
+</div>
+</div>
+<div class="bg-white rounded-xl shadow-[0_4px_20px_rgba(79,70,229,0.02)] p-sm border border-slate-50 hover:shadow-[0_12px_32px_rgba(79,70,229,0.06)] transition-all group">
+<div class="aspect-square rounded-lg overflow-hidden mb-sm relative">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Minimalist gold chain necklace draped over a white marble surface, luxury lighting and shadow play" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDyRIY3jv1ec1UFofo6lrQpn7d06pNffKiuUWW6_-0aIhINhCDEZvyihm3YNldgdF6ExDmy8gmWJgh7OlAoFXZsqBMAV2HTySjki7S1sgsHZR6JKrp3p-VCNJXcykRbInbtlLWCLsqRTPAcWwx1-wZnVlcYTwPbaGl2peJ8KE7WcQG6PgBfjyR_iL--ikX1exBlpxjnd1QJtfIGJ7rqM6-tJcK1BQ6HyCVBRgu9P1sl6o7Omn6uesjOTQuEwHy1wc1g-d3N_tmkewy1"/>
+</div>
+<div class="px-xs">
+<span class="font-label-sm text-[10px] text-primary uppercase tracking-wider">Limited</span>
+<h3 class="font-headline-sm text-[18px] text-on-background mt-1">Kalung Minimalis</h3>
+<p class="font-body-md text-primary font-semibold mt-xs">Rp 210.000</p>
+</div>
+</div>
+</div>
+</section>
+<section class="py-xl bg-surface-container-low overflow-hidden">
+<div class="max-w-[1280px] mx-auto px-8">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-xl items-center">
+<div class="relative order-2 lg:order-1">
+<div class="aspect-[4/5] rounded-xl overflow-hidden shadow-xl">
+<img class="w-full h-full object-cover" data-alt="Hands of an artisan carefully threading small glass beads onto a string in a sun-drenched studio workspace" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD-QvzRjQOOA0OScGXQo5-xLQt0DHNn68BBl9q9geV_V92t-AscNMfjDnmKXI8I3SRLaOnvRM-4rSu0wLgVEmo74URE_Ux6vuM3OHK97WdQU5F01N90Eujb50Ebx3aJDLo1P8sQsUUftVKRsPIPiCpDqo84m7JXd-VbfBp9p4MGDMpE2yE2m-7WEjB8mzdfkywZkkv3VRzfN-adxZTPuHMqww3qlOVTTkJpVHaUJKujtF9ukKU7KDM1AzPS_yO2guRvUyTEpFDMfq2j"/>
+</div>
+<div class="absolute -bottom-md -right-md bg-white p-lg rounded-xl shadow-lg max-w-[240px] hidden md:block border border-slate-50">
+<p class="font-body-md text-on-surface italic">"Setiap simpul dan manik menceritakan sebuah perjalanan dedikasi."</p>
+</div>
+</div>
+<div class="order-1 lg:order-2 space-y-md">
+<span class="font-label-sm text-primary uppercase tracking-widest">Our Philosophy</span>
+<h2 class="font-headline-md text-headline-md text-on-background">Handmade with Love</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
+                            Di TokoKita, kami percaya bahwa aksesori bukan sekadar hiasan. Setiap bagian dibuat secara manual oleh pengrajin lokal kami, memastikan kualitas yang tak tertandingi dan karakter unik yang tidak bisa dihasilkan oleh mesin.
+                        </p>
+<div class="grid grid-cols-2 gap-md pt-sm">
+<div class="flex flex-col gap-base">
+<span class="material-symbols-outlined text-primary text-3xl" data-icon="eco">eco</span>
+<h4 class="font-headline-sm text-[18px]">Eco-Friendly</h4>
+<p class="font-body-md text-sm text-on-surface-variant">Bahan ramah lingkungan yang dipilih secara etis.</p>
+</div>
+<div class="flex flex-col gap-base">
+<span class="material-symbols-outlined text-primary text-3xl" data-icon="auto_awesome">auto_awesome</span>
+<h4 class="font-headline-sm text-[18px]">Custom Design</h4>
+<p class="font-body-md text-sm text-on-surface-variant">Personalisasi aksesori sesuai karakter unikmu.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="py-xl max-w-[1280px] mx-auto px-8 text-center">
+<div class="max-w-3xl mx-auto bg-primary-container rounded-3xl p-lg md:p-xl relative overflow-hidden">
+<div class="relative z-10">
+<h2 class="font-headline-md text-headline-md text-on-primary-container mb-sm">Dapatkan Penawaran Eksklusif</h2>
+<p class="font-body-lg text-on-primary-container/80 mb-lg">Daftar sekarang dan dapatkan diskon 10% untuk pembelian pertama Anda.</p>
+<form class="flex flex-col md:flex-row gap-sm max-w-md mx-auto">
+<input class="flex-1 bg-white border-none rounded-lg px-md py-sm focus:ring-2 focus:ring-white/50 font-body-md" placeholder="Alamat email Anda" type="email"/>
+<button class="bg-on-background text-white px-lg py-sm rounded-lg font-label-md hover:opacity-90 transition-opacity">Langganan</button>
+</form>
+</div>
+<div class="absolute top-0 right-0 w-64 h-64 bg-white/5 rounded-full -translate-y-1/2 translate-x-1/2"></div>
+<div class="absolute bottom-0 left-0 w-32 h-32 bg-white/5 rounded-full translate-y-1/2 -translate-x-1/2"></div>
+</div>
+</section>
+</main>
+<footer class="bg-slate-50 dark:bg-slate-950 w-full mt-auto border-t border-slate-200 dark:border-slate-800">
+<div class="max-w-[1280px] mx-auto px-8 py-16 grid grid-cols-1 md:grid-cols-4 gap-12 font-['Plus_Jakarta_Sans'] text-sm leading-relaxed">
+<div class="md:col-span-1">
+<span class="text-xl font-bold text-slate-900 dark:text-slate-100 mb-4 block">TokoKita</span>
+<p class="text-slate-500 dark:text-slate-500 mb-6 max-w-xs">
+                    Sentuhan tangan manusia dalam setiap karya seni perhiasan untuk menemani langkah Anda.
+                </p>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-slate-400 cursor-pointer hover:text-indigo-600" data-icon="public">public</span>
+<span class="material-symbols-outlined text-slate-400 cursor-pointer hover:text-indigo-600" data-icon="mail">mail</span>
+</div>
+</div>
+<div>
+<h4 class="font-bold text-slate-900 dark:text-slate-100 mb-4">Navigasi</h4>
+<ul class="space-y-3">
+<li><a class="text-slate-500 dark:text-slate-500 hover:text-indigo-500 hover:translate-x-1 transition-transform inline-block" href="navigasi.html">Tentang Kami</a></li>
+<li><a class="text-slate-500 dark:text-slate-500 hover:text-indigo-500 hover:translate-x-1 transition-transform inline-block" href="navigasi.html">Kebijakan Pengembalian</a></li>
+<li><a class="text-slate-500 dark:text-slate-500 hover:text-indigo-500 hover:translate-x-1 transition-transform inline-block" href="navigasi.html">Panduan Ukuran</a></li>
+<li><a class="text-slate-500 dark:text-slate-500 hover:text-indigo-500 hover:translate-x-1 transition-transform inline-block" href="navigasi.html">Hubungi Kami</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold text-slate-900 dark:text-slate-100 mb-4">Kategori</h4>
+<ul class="space-y-3">
+<li><a class="text-slate-500 dark:text-slate-500 hover:text-indigo-500 hover:translate-x-1 transition-transform inline-block" href="produk.html">Gelang</a></li>
+<li><a class="text-slate-500 dark:text-slate-500 hover:text-indigo-500 hover:translate-x-1 transition-transform inline-block" href="produk.html">Kalung</a></li>
+<li><a class="text-slate-500 dark:text-slate-500 hover:text-indigo-500 hover:translate-x-1 transition-transform inline-block" href="produk.html">Cincin</a></li>
+<li><a class="text-slate-500 dark:text-slate-500 hover:text-indigo-500 hover:translate-x-1 transition-transform inline-block" href="produk.html">Anting</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold text-slate-900 dark:text-slate-100 mb-4">Metode Pembayaran</h4>
+<div class="grid grid-cols-3 gap-2 opacity-50 grayscale hover:grayscale-0 transition-all duration-300">
+<div class="h-8 bg-slate-200 rounded"></div>
+<div class="h-8 bg-slate-200 rounded"></div>
+<div class="h-8 bg-slate-200 rounded"></div>
+</div>
+</div>
+<div class="md:col-span-4 border-t border-slate-200 dark:border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="text-slate-500">© 2024 TokoKita. Handmade with quality and care.</p>
+<div class="flex gap-6">
+<span class="text-slate-400 hover:text-primary cursor-pointer transition-colors">Privacy Policy</span>
+<span class="text-slate-400 hover:text-primary cursor-pointer transition-colors">Terms of Service</span>
+</div>
+</div>
+</div>
+</footer>
+</body></html>
